@@ -12,13 +12,13 @@ A analytics professional with 4 years of experience using machine learning, stat
 </div>
 
 ## Projects
-**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
+**[Twitter Sentiment Analysis](https://github.com/kbai612)**
 - Designed and implemented a sentiment analysis pipeline leveraging the Twitter API to collect real-time tweets, applied advanced natural language processing (NLP) techniques (tokenization, stop-word removal, TF-IDF vectorization), and trained a Bidirectional LSTM model to classify sentiments as positive, negative, or neutral with 85% accuracy.
 - Developed a real-time analytics system using Apache Kafka for streaming tweet data, Spark for batch processing and sentiment scoring, and PostgreSQL for storing sentiment trends, enabling dynamic monitoring of public opinion during live events.
 - Created an interactive dashboard using Flask and Plotly to visualize sentiment trends over time, geographic distributions of sentiments, and keyword-based insights, providing actionable intelligence for marketing and policy decision-making.
 - Optimized data preprocessing workflows, reducing noise in text data by implementing custom regex patterns for hashtag and emoji handling, achieving a 10% improvement in model performance metrics such as precision and recall.
 
-**[Local RAG AI Agent for Sensitive Documentation](https://www.mdpi.com/1424-8220/22/8/3048)**
+**[Local RAG AI Agent for Sensitive Documentation](https://github.com/kbai612)**
 - Architected a fully local AI infrastructure integrating Ollama (LLMs), Qdrant (vector database), PostgreSQL (SQL database), and n8n (workflow automation) using Docker Compose, ensuring complete data privacy and control.
 - Developed a Retrieval-Augmented Generation (RAG) AI agent, enabling efficient document retrieval and context-aware interactions by combining vector search with LLMs and structured memory storage.
 - Streamlined document ingestion workflows by automating text extraction from Google Drive, vectorizing content, and storing metadata in Qdrant, significantly enhancing data processing efficiency.
