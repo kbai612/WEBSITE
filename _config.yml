@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Website/images/circle_headshot.JPEG"
+  avatar           : "/Website/images/circle_headshot.JPEG"
   name             : # "Data Analyst / Data Scientist"
   pronouns         : " "  
   bio              : "Python | SQL | Machine Learning | Gen AI | Tableau | Power BI"
