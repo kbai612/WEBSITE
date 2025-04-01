@@ -18,6 +18,23 @@
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+
+    {% comment %}
+    {% if author.education %}
+    <div class="author__education">
+      <h4>Education</h4>
+      <div>
+        {% for edu in author.education %}
+          <p>
+            {% if edu.degree %}<span class="author__education-degree">{{ edu.degree }}</span>{% endif %}
+            {% if edu.institution %}, <span class="author__education-institution">{{ edu.institution }}</span>{% endif %}
+            {% if edu.years %} (<span class="author__education-years">{{ edu.years }}</span>){% endif %}
+          </p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% endcomment %}
   </div>
 
   <div class="author__urls-wrapper">
@@ -34,7 +51,7 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>kevinbaiyyz@gmail.com</a></li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
@@ -63,18 +80,9 @@
         <li><a href="{{ author.scopus }}"><i class="ai ai-scopus icon-pad-right"></i>Scopus</a></li>
       {% endif %}
 
-      <!-- Font Awesome icons / Repositories and software development -->
-      {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket icon-pad-right" aria-hidden="true"></i>Bitbucket</a></li>
-      {% endif %}
-      {% if author.codepen %}
-        <li><a href="https://codepen.io/{{ author.codepen }}"><i class="fab fa-fw fa-codepen icon-pad-right" aria-hidden="true"></i>CodePen</a></li>
-      {% endif %}      
-      {% if author.dribbble %}
-        <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
-      {% endif %}      
+      <!-- Font Awesome icons / Repositories and software development -->   
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>github.com/kbai612</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
@@ -112,7 +120,7 @@
         <li><a href="https://last.fm/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm icon-pad-right" aria-hidden="true"></i>Last.fm</a></li>
       {% endif %}      
       {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>linkedin.com/in/kevin-bai/</a></li>
       {% endif %}      
       {% if author.mastodon %}
         <li><a href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>

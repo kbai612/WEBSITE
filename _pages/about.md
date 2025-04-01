@@ -1,49 +1,49 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Kevin Bai - Data Analyst/Data Scientist"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+<div class="page-intro">
+A analytics professional with 4 years of experience using machine learning, statistical modeling, and big data tools to solve complex problems and deliver actionable insights. Proficient in Python, R, SQL, and cloud platforms, I have developed predictive models that improved operational efficiency and decision-making across industries. My ability to translate technical findings into business strategies makes me a strong candidate for roles focused on innovation and impact.
+</div>
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## Projects
+**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
+- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
+- The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+**[Gen AI Document Reader](https://www.mdpi.com/1424-8220/22/8/3048)**
+- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
+- The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+## Work Experience
+**Technical Data Analyst @ StackAdapt (_August 2023 - Present_)**
+-	Leveraged historical data and advanced analytics techniques to optimize political advertising strategies for the 2024 US election cycle, resulting in a 156.3% increase in CTV/Video ad spending compared to the 2020 election cycle.
+-	Developed a KPI monitoring system which utilized ThoughtSpot dashboards, email alerts and slack alerts to detect short term anomalies and monitor long term trends, leading to 95% of health breaches being caught on the day that it happened.
+-	Conducted A/B testing to validate an initial click-through rate hypothesis, adjusting frequency caps for different audience   segments which improved overall campaign efficiency and resulted in a 25% increase in spend and click KPIs.
+-	Developed and implemented an automated data pipeline using SQL, Python and Snowflake, enabling real-time campaign reporting, optimization, and analysis. This solution resulted in a 45% reduction in time spent creating reports and allowing for a 35% increase in ad spend efficiency by identifying and utilizing optimal ad inventory for campaigns.
+-	Utilized decision trees and feature engineering to determine fraudulent ad probabilities on an impression level, allowing for faster detection and blocks for fraudulent domain inventory, reducing false positives by 30% and increasing fraud detection accuracy by 80%.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+**Business Intelligence Analyst @ Brokerlink (_December 2021 - May 2023_)**
+-	Collaborated with Revenue and Leadership teams to implement a data-driven underwriting strategy, leveraging advanced analytics to reduce the average claim value by 12% and improve the loss ratio by 5% over 3 fiscal quarters.
+-	Designed and implemented scalable data pipelines on AWS using Glue, Lambda, and S3, integrating with MariaDB for efficient data management, resulting in a 50% reduction in data processing time and saving the team approximately 20 hours per week on data-related tasks 
+-	Spearheaded a data visualization project using Power BI for the commercial lines department, creating interactive dashboards to monitor KPIs, line health, and action items, resulting in a 15% improvement in data-driven decision-making and a 10% reduction in response time to critical alerts. 
+-	Developed retention analysis using XG boost method applied in python for binary classification model and outputs with identification of clients with most likelihood of cancellation for stakeholder teams to proactively re-market, leading to an increased in commercial lines account retention by 40% from Q4 to Q1
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+**Data Analyst @ Nova Century Scientific Inc (_August 2020 - January 2021_)**
+-	Developed and deployed a robust relational data warehouse solution utilizing SQL Server, integrating key metrics such as customer demographics, sales performance, and inventory levels, resulting in a 70% reduction in report generation time and a 12% improvement in data accuracy.
+-	Collaborated with the leadership team to design and implement Power BI dashboards that facilitated real-time data analysis, resulting in a 32% increase in the identification of key data trends and a 25% improvement in tracking and monitoring key performance indicators (KPIs).
+-	Leveraged VBA programming to enhance analysis formatting, report generation, data lookups, and interface functionality, resulting in a 50% improvement in data retrieval efficiency
+-	Designed and maintained monthly performance reports that helped identify key trends and led to a 15% reduction in operational costs over six months.
 
-**Markdown generator**
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+## Education
+**Georgia Institute of Technology** | M.S. Computational Analytics (Data Science)  
+Regression Analysis, Bayesian Statistics, Time Series Forecasting, Simulation, Deep Learning, Data Visualization, MLOps, Graduate Level Algorithmns
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+**University of Waterloo** | B.A. Accounting and Financial Management  
+Statistical Analysis, Business Strategy, Equity Investments, Quantitative Finance, Stochastic Processes and Applications, Multivariable Calculus

@@ -90,7 +90,7 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 225px;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -104,7 +104,7 @@
   display: table-cell;
   vertical-align: top;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 35px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -146,7 +146,8 @@
 
 .author__bio {
   margin: 0;
-
+  font-size: $type-size-8;
+  padding-right: 35px;
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;

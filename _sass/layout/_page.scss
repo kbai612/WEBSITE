@@ -52,7 +52,7 @@
 
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--global-border-color);
+    border-bottom: 1px solid var(--global-text-color);
   }
 
   p, li, dl {
@@ -396,6 +396,10 @@
 
 .page__related-title {
   margin-bottom: 10px;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
   text-transform: uppercase;
+}
+
+.page-intro {
+  font-size: $type-size-5;
 }
