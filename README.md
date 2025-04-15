@@ -1,11 +1,12 @@
 # Kevin Bai - Data Analyst / Data Scientist
 
 ## Projects
-**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
-- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
-- The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+**[Cerebro AI - RAG Study Tool]([https://www.mdpi.com/1424-8220/22/8/3048](https://github.com/kbai612/Cerebro-AI/tree/main))**
+- Developed a web application that utlizes AI to generate study materials and answer complex questions in the form of a Tutor Chatbot, Flashcards and Multiple Choice Questions
+- The app is integrated with Deekseek V3 for model reasoning, HuggingFace FlagEmbedding model for generating text embeddings, langchain FAISS for vector database storage, Google Drive API for storing a constant knoweledge base, langchain libraries for RAG and document processing, and Streamlit for the front end interface.
+- The proposed method provides a unique way to go over study material, specifically being able to tailor the app to areas that need more attention or in depth analysis
 
-**[Gen AI Document Reader](https://www.mdpi.com/1424-8220/22/8/3048)**
+**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
 - Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
 - The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
 
