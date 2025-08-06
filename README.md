@@ -6,9 +6,8 @@
 - The app is integrated with Deekseek V3 for model reasoning, HuggingFace FlagEmbedding model for generating text embeddings, langchain FAISS for vector database storage, Google Drive API for storing a constant knoweledge base, langchain libraries for RAG and document processing, and Streamlit for the front end interface.
 - The proposed method provides a unique way to go over study material, specifically being able to tailor the app to areas that need more attention or in depth analysis
 
-**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
-- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
-- The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+**[AI Reinforcement Learning for Snake]([https://www.mdpi.com/1424-8220/22/8/3048](https://github.com/kbai612/Reinforcement_Learning_Snake))**
+- Implementation of Deep Q-Network (DQN) reinforcement learning to train an AI agent to play the classic Snake game. This project demonstrates the application of deep reinforcement learning techniques to game environments, showcasing how an AI agent can learn optimal strategies through trial and error.
 
 ## Work Experience
 **Technical Data Analyst @ StackAdapt (_August 2023 - Present_)**
