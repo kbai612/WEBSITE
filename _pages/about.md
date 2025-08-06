@@ -17,12 +17,8 @@ A analytics professional with 4 years of experience using machine learning, stat
 - The app is integrated with Deekseek V3 for model reasoning, HuggingFace FlagEmbedding model for generating text embeddings, langchain FAISS for vector database storage, Google Drive API for storing a constant knoweledge base, langchain libraries for RAG and document processing, and Streamlit for the front end interface.
 - The proposed method provides a unique way to go over study material, specifically being able to tailor the app to areas that need more attention or in depth analysis
 
-**[Twitter Sentiment Analysis](https://github.com/kbai612/Cerebro-AI/tree/main)**
-- Designed and implemented a sentiment analysis pipeline leveraging the Twitter API to collect real-time tweets, applied advanced natural language processing (NLP) techniques (tokenization, stop-word removal, TF-IDF vectorization), and trained a Bidirectional LSTM model to classify sentiments as positive, negative, or neutral with 85% accuracy.
-- Developed a real-time analytics system using Apache Kafka for streaming tweet data, Spark for batch processing and sentiment scoring, and PostgreSQL for storing sentiment trends, enabling dynamic monitoring of public opinion during live events.
-- Created an interactive dashboard using Flask and Plotly to visualize sentiment trends over time, geographic distributions of sentiments, 
-and keyword-based insights, providing actionable intelligence for marketing and policy decision-making.
-- Optimized data preprocessing workflows, reducing noise in text data by implementing custom regex patterns for hashtag and emoji handling, achieving a 10% improvement in model performance metrics such as precision and recall.
+**[Deep Q-Learning Snake AI]([https://www.mdpi.com/1424-8220/22/8/3048](https://github.com/kbai612/Reinforcement_Learning_Snake))**
+- Implementation of Deep Q-Network (DQN) reinforcement learning to train an AI agent to play the classic Snake game. This project demonstrates the application of deep reinforcement learning techniques to game environments, showcasing how an AI agent can learn optimal strategies through trial and error.
 
 ## Work Experience
 **Technical Data Analyst @ StackAdapt (_August 2023 - Present_)**
