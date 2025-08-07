@@ -22,11 +22,12 @@ A analytics professional with 4 years of experience using machine learning, stat
 
 ## Work Experience
 **Technical Data Analyst @ StackAdapt (_August 2023 - Present_)**
--	Leveraged historical data and advanced analytics techniques to optimize political advertising strategies for the 2024 US election cycle, resulting in a 156.3% increase in CTV/Video ad spending compared to the 2020 election cycle.
--	Developed a KPI monitoring system which utilized ThoughtSpot dashboards, email alerts and slack alerts to detect short term anomalies and monitor long term trends, leading to 95% of health breaches being caught on the day that it happened.
--	Conducted A/B testing to validate an initial click-through rate hypothesis, adjusting frequency caps for different audience   segments which improved overall campaign efficiency and resulted in a 25% increase in spend and click KPIs.
--	Developed and implemented an automated data pipeline using SQL, Python and Snowflake, enabling real-time campaign reporting, optimization, and analysis. This solution resulted in a 45% reduction in time spent creating reports and allowing for a 35% increase in ad spend efficiency by identifying and utilizing optimal ad inventory for campaigns.
+-	Championed an industry leading media transcoding platform integration, working cross functionally with the engineering and product teams to enable client creatives to be able to run on key industry player’s ad placements including Disney, Paramount, NBCU and HBO Max, increasing YoY CTV spend by over 150%.
+-	Developed a KPI monitoring system which utilized ThoughtSpot dashboards, email alerts and slack alerts to detect short term anomalies and monitor long term trends, leading to 95% of performance drops investigated and actioned off of.
+-	Engineered a scalable data pipeline using Spark, AWS and Snowflake, orchestrated with Airflow for ETL processes. Implemented dbt for data transformation and developed Python scripts for data quality validation. This architecture enabled real-time campaign analytics through REST APIs, reducing reporting time by 45% and improving ad spend efficiency by 35% through data-driven optimization of ad inventory allocation. 
 -	Utilized decision trees and feature engineering to determine fraudulent ad probabilities on an impression level, allowing for faster detection and blocks for fraudulent domain inventory, reducing false positives by 30% and increasing fraud detection accuracy by 80%.
+-	Conducted A/B testing to validate an initial click-through rate hypothesis, adjusting frequency caps for different audience   segments which improved overall campaign efficiency and resulted in a 25% increase in spend and click KPIs.
+
 
 **Business Intelligence Analyst @ Brokerlink (_December 2021 - May 2023_)**
 -	Collaborated with Revenue and Leadership teams to implement a data-driven underwriting strategy, leveraging advanced analytics to reduce the average claim value by 12% and improve the loss ratio by 5% over 3 fiscal quarters.
