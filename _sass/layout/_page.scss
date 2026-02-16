@@ -402,4 +402,320 @@
 
 .page-intro {
   font-size: $type-size-5;
+  line-height: 1.8;
+  color: var(--global-base-color);
+  font-weight: 400;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--global-border-color);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+
+  .tag {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    font-size: $type-size-7;
+    font-weight: 500;
+    color: var(--global-base-color);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: $border-radius;
+    transition: $global-transition;
+
+    &:hover {
+      background: rgba(37, 99, 235, 0.12);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+  }
+}
+
+.skills-intro {
+  font-size: $type-size-6;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--global-border-color);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-item {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  padding: 1rem;
+  transition: $global-transition;
+  position: relative;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .skill-icon {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  strong {
+    display: inline-block;
+    font-size: $type-size-6;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.35rem;
+    vertical-align: middle;
+  }
+
+  p {
+    font-size: $type-size-8;
+    color: var(--global-text-color-light);
+    margin: 0.35rem 0 0;
+    line-height: 1.4;
+  }
+}
+
+.skill-level {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.35rem;
+  width: fit-content;
+
+  &.expert {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  &.proficient {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1d4ed8;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+  }
+
+  &.intermediate {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+}
+
+.skill-tags-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.domain-tag {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-size: $type-size-7;
+  font-weight: 500;
+  color: var(--global-text-color);
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  transition: $global-transition;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    background: var(--global-thead-color);
+    transform: translateY(-1px);
+  }
+}
+
+.about-intro {
+  font-size: $type-size-5;
+  line-height: 1.7;
+  color: var(--global-text-color);
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--global-border-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-item {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  padding: 1rem;
+  transition: $global-transition;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .about-icon {
+    font-size: 1.75rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  strong {
+    display: inline-block;
+    font-size: $type-size-6;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.5rem;
+    vertical-align: middle;
+  }
+
+  p {
+    font-size: $type-size-7;
+    color: var(--global-text-color-light);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.strength-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.strength-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: $type-size-6;
+  font-weight: 500;
+  color: var(--global-link-color);
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  transition: $global-transition;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    background: var(--global-thead-color);
+    transform: translateY(-1px);
+  }
+}
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.education-item {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-left: 3px solid var(--global-base-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  strong {
+    display: block;
+    font-size: $type-size-5;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.35rem;
+  }
+
+  .degree {
+    display: block;
+    font-size: $type-size-6;
+    font-weight: 500;
+    color: var(--global-base-color);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: $type-size-7;
+    color: var(--global-text-color-light);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hobby-item {
+  background: var(--global-code-background-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  padding: 0.85rem;
+  text-align: center;
+  transition: $global-transition;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    background: var(--global-thead-color);
+    transform: translateY(-2px);
+  }
+
+  .hobby-icon {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  strong {
+    display: block;
+    font-size: $type-size-7;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+    color: var(--global-text-color-light);
+    margin: 0;
+    line-height: 1.3;
+  }
 }

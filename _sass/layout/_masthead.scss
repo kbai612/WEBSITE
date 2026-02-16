@@ -19,8 +19,14 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
+    display: flex;
+    align-items: center;
     padding: 1em 1em 1em;
     font-family: $sans-serif-narrow;
+
+    @include breakpoint($large) {
+      padding-left: calc(2.5 / 12 * 100% + 1em - 105px);
+    }
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -28,6 +34,8 @@
 
     nav {
       z-index: 10;
+      flex: 1;
+      min-width: 0;
     }
 
     a {

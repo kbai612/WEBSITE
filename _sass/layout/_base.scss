@@ -160,9 +160,13 @@ td > code {
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: 1.5em 0;
   border: 0;
   border-top: 1px solid var(--global-border-color);
+}
+
+.page__content hr {
+  margin: 1.25em 0;
 }
 
 /* lists */

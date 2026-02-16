@@ -1,0 +1,14 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Experience"
+    url: /experience/
+  - title: "Skills"
+    url: /skills/
+  - title: "About"
+    url: /about/
+
+  # - title: "Blog"
+  #   url: /blog/

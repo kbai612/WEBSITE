@@ -1,0 +1,107 @@
+/* ==========================================================================
+   DARK MODE TOGGLE & THEME OVERRIDES
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --global-bg-color                   : #161b22;
+  --global-border-color               : #30363d;
+  --global-code-background-color      : #0d1117;
+  --global-code-text-color            : #e6edf3;
+  --global-fig-caption-color          : #8b949e;
+  --global-link-color                 : #58a6ff;
+  --global-link-color-hover           : #79c0ff;
+  --global-link-color-visited         : #a371f7;
+  --global-masthead-link-color        : #e6edf3;
+  --global-masthead-link-color-hover   : #ffffff;
+  --global-text-color                 : #e6edf3;
+  --global-text-color-light           : #8b949e;
+  --global-thead-color                : #21262d;
+  --global-base-color                 : #58a6ff;
+}
+
+[data-theme="dark"] .masthead {
+  background: rgba(22, 27, 34, 0.85);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+}
+
+[data-theme="dark"] .greedy-nav .hidden-links {
+  background: var(--global-bg-color);
+  border-color: var(--global-border-color);
+}
+
+[data-theme="dark"] .greedy-nav .hidden-links::after {
+  border-color: var(--global-bg-color) transparent;
+}
+
+[data-theme="dark"] .skill-level.expert {
+  background: rgba(48, 164, 132, 0.25);
+  color: #3fb381;
+  border-color: rgba(48, 164, 132, 0.5);
+}
+
+[data-theme="dark"] .skill-level.proficient {
+  background: rgba(88, 166, 255, 0.2);
+  color: #79c0ff;
+  border-color: rgba(88, 166, 255, 0.4);
+}
+
+[data-theme="dark"] .skill-level.intermediate {
+  background: rgba(210, 153, 34, 0.2);
+  color: #d4a72c;
+  border-color: rgba(210, 153, 34, 0.4);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 0.25rem;
+}
+
+.theme-toggle__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  background: var(--global-bg-color);
+  color: var(--global-masthead-link-color);
+  cursor: pointer;
+  transition: $global-transition;
+}
+
+.theme-toggle__btn:hover {
+  border-color: var(--global-base-color);
+  color: var(--global-base-color);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.theme-toggle__btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+.theme-toggle__btn .icon-sun {
+  display: none;
+}
+
+.theme-toggle__btn .icon-moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__btn .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__btn .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__btn:hover {
+  background: rgba(88, 166, 255, 0.15);
+}

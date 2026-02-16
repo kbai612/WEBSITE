@@ -14,7 +14,7 @@ layout: compress
   <body>
 
     {% include browser-upgrade.html %}
-    {% comment %} {% include masthead.html %} {% endcomment %}
+    {% include masthead.html %}
 
     {{ content }}
 
@@ -26,6 +26,7 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+    {% include theme-toggle-script.html %}
 
   </body>
 </html>

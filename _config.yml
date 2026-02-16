@@ -22,9 +22,9 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "circle_headshot.JPEG"
-  name             : # "Data Analyst / Data Scientist"
+  name             : "Kevin Bai"
   pronouns         : " "  
-  bio              : "Python | SQL | Machine Learning | Gen AI | Tableau | Power BI"
+  bio              : "Python | SQL | Machine Learning | Data Warehouse | Data Visualization"
   location         : "Toronto, Ontario"
   employer         : "Georgia Institute of Technology"
   uri              : # URL
@@ -206,7 +206,6 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
@@ -215,7 +214,6 @@ whitelist:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
