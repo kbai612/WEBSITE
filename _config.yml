@@ -13,7 +13,7 @@ title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
 url                      : https://kbai612.github.io
-baseurl                  : /Website
+baseurl                  : /WEBSITE
 repository               : "kbai612/WEBSITE"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
