@@ -11,3 +11,18 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+
+# Ignore the _config.yml file
+_config.yml
+
+# Ignore the cursor.md file
+cursor.md
+
+# Ignore the .env file
+.env
+
+# Ignore the Gemfile.lock file
+Gemfile.lock
+
+#Ignore the Gemfile file
+Gemfile

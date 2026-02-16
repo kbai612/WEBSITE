@@ -4,6 +4,7 @@
 
 [data-theme="dark"] {
   --global-bg-color                   : #161b22;
+  --global-bg-subtle                  : radial-gradient(ellipse 100% 60% at 50% 0%, rgba(88, 166, 255, 0.06), transparent 45%);
   --global-border-color               : #30363d;
   --global-code-background-color      : #0d1117;
   --global-code-text-color            : #e6edf3;
@@ -86,21 +87,25 @@
   fill: currentColor;
 }
 
+.theme-toggle__btn .icon-moon path {
+  stroke: currentColor;
+}
+
 .theme-toggle__btn .icon-sun {
-  display: none;
-}
-
-.theme-toggle__btn .icon-moon {
-  display: block;
-}
-
-[data-theme="dark"] .theme-toggle__btn .icon-sun {
   display: block;
   fill: #eab308;
 }
 
-[data-theme="dark"] .theme-toggle__btn .icon-moon {
+.theme-toggle__btn .icon-moon {
   display: none;
+}
+
+[data-theme="dark"] .theme-toggle__btn .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__btn .icon-moon {
+  display: block;
 }
 
 [data-theme="dark"] .theme-toggle__btn:hover {
