@@ -19,4 +19,4 @@ I specialize in transforming complex data into actionable insights that drive bu
 - **Data Engineering** — Designing scalable pipelines and automated workflows for real-time analytics
 - **Business Strategy** — Translating technical findings into strategic recommendations
 
-Explore my [projects](/WEBSITE/projects/), [experience](/WEBSITE/experience/), and [skills](/WEBSITE/skills/) to learn more about my work.
+Explore my [projects](/projects/), [experience](/experience/), and [skills](/skills/) to learn more about my work.
