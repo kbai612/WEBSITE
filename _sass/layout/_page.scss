@@ -34,6 +34,30 @@
   }
 }
 
+.page--home {
+  @include breakpoint($large) {
+    @include span(12 of 12);
+    @include prefix(0);
+    @include suffix(0);
+  }
+
+  .page__inner-wrap,
+  .page__content {
+    @include full();
+  }
+
+  .page__content {
+    overflow: hidden;
+
+    h2 {
+      margin-top: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+      line-height: 1.1;
+    }
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
@@ -408,6 +432,510 @@
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 2px solid var(--global-border-color);
+}
+
+.home-hero {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(16, 35, 62, 0.12);
+  border-left: 10px solid #0d7377;
+  border-radius: 20px;
+  background: #f5f1e8;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+  color: var(--global-text-color);
+  animation: intro 0.45s both;
+  animation-delay: 0.1s;
+
+  @include breakpoint($large) {
+    grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 2.25rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-top: 2px solid rgba(13, 115, 119, 0.22);
+    border-left: 2px solid rgba(13, 115, 119, 0.22);
+    border-radius: 18px 0 0 0;
+    pointer-events: none;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 20px;
+    background: rgba(13, 115, 119, 0.08);
+    pointer-events: none;
+  }
+}
+
+.home-hero__content,
+.recruiter-card {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-eyebrow,
+.home-section__eyebrow,
+.recruiter-card__eyebrow,
+.featured-card__kicker,
+.home-win-card__metric {
+  margin: 0;
+  font-size: $type-size-7;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-eyebrow,
+.home-section__eyebrow,
+.featured-card__kicker,
+.home-win-card__metric {
+  color: var(--global-base-color);
+}
+
+.home-hero .home-eyebrow,
+.recruiter-card__eyebrow {
+  color: #29465f;
+}
+
+.home-hero__title {
+  margin: 0.6rem 0 0;
+  max-width: 16ch;
+  color: #10233e;
+  font-size: clamp(1.75rem, 3.6vw, 2.95rem);
+  line-height: 1.02;
+}
+
+.home-hero__lead {
+  max-width: 38rem;
+  margin: 2rem 0 0;
+  color: #44566d;
+  font-size: $type-size-5;
+  line-height: 1.65;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.home-hero .btn {
+  margin-bottom: 0;
+}
+
+.home-hero .home-btn--secondary {
+  color: #10233e !important;
+  background: #fcfbf7;
+  border: 1px solid rgba(16, 35, 62, 0.18) !important;
+
+  &:hover {
+    background: #ffffff;
+    border-color: rgba(16, 35, 62, 0.34) !important;
+  }
+}
+
+.home-inline-link {
+  color: #10233e;
+  font-weight: 600;
+  text-decoration: none !important;
+
+  &:hover {
+    color: #0d7377;
+    text-decoration: underline !important;
+  }
+}
+
+.recruiter-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(16, 35, 62, 0.08);
+  border-radius: 18px;
+  background: #11233a;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.16);
+
+  @include breakpoint($small) {
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  @include breakpoint($large) {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+}
+
+.recruiter-card__photo {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.28);
+
+  @include breakpoint($large) {
+    width: 144px;
+    height: 144px;
+  }
+}
+
+.recruiter-card__body {
+  min-width: 0;
+}
+
+.recruiter-card__name {
+  margin: 0.35rem 0 0;
+  color: #f8fafc;
+  font-size: clamp(1.8rem, 2.8vw, 2.35rem);
+  line-height: 1.05;
+}
+
+.recruiter-card__summary {
+  margin: 0.65rem 0 0;
+  color: rgba(240, 249, 255, 0.78);
+  font-size: $type-size-6;
+  line-height: 1.55;
+}
+
+.recruiter-card__list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  li + li {
+    margin-top: 0.7rem;
+  }
+
+  a,
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-decoration: underline !important;
+  }
+
+  i {
+    width: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.home-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 2rem;
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.impact-card,
+.focus-card,
+.home-win-card,
+.featured-card {
+  border: 1px solid var(--global-border-color);
+  border-radius: 18px;
+  background: #fbfaf6;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  transition: $global-transition;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(13, 115, 119, 0.28);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.1);
+  }
+}
+
+.impact-card {
+  padding: 1rem;
+  animation: intro 0.35s both;
+
+  &:nth-child(1) { animation-delay: 0.12s; }
+  &:nth-child(2) { animation-delay: 0.18s; }
+  &:nth-child(3) { animation-delay: 0.24s; }
+  &:nth-child(4) { animation-delay: 0.3s; }
+}
+
+.impact-card:first-child {
+  background: #11233a;
+  border-color: #11233a;
+}
+
+.impact-card:first-child .impact-card__value,
+.impact-card:first-child .impact-card__label,
+.impact-card:first-child .impact-card__context {
+  color: #f8fafc;
+}
+
+.impact-card:nth-child(2) {
+  background: #eef5f4;
+}
+
+.impact-card:nth-child(3) {
+  background: #f4f0e6;
+}
+
+.impact-card:nth-child(4) {
+  background: #eef3fb;
+}
+
+.impact-card__value {
+  margin: 0;
+  color: var(--global-base-color);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.impact-card__label {
+  margin: 0.5rem 0 0;
+  color: var(--global-text-color);
+  font-size: $type-size-6;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.impact-card__context {
+  margin: 0.4rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: $type-size-8;
+  line-height: 1.45;
+}
+
+.home-section {
+  margin: 0 0 2.2rem;
+}
+
+.home-section__header {
+  margin-bottom: 1rem;
+}
+
+.home-section__header h2 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.55rem, 2.6vw, 2.3rem);
+}
+
+.home-focus-grid,
+.home-win-grid,
+.featured-work__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-focus-grid {
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.home-win-grid {
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.featured-work__grid {
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.focus-card,
+.home-win-card,
+.featured-card {
+  padding: 1.2rem;
+}
+
+.focus-card h3,
+.home-win-card h3,
+.featured-card h3 {
+  margin: 0.45rem 0 0;
+  color: var(--global-text-color);
+  font-size: $type-size-5;
+  line-height: 1.25;
+}
+
+.focus-card p,
+.home-win-card p,
+.featured-card p {
+  margin: 0.7rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+  line-height: 1.6;
+}
+
+.home-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.home-chip-row--dense {
+  margin-top: 0;
+}
+
+.home-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.72rem;
+  border: 1px solid rgba(13, 115, 119, 0.18);
+  border-radius: 999px;
+  background: rgba(13, 115, 119, 0.08);
+  color: var(--global-base-color);
+  font-size: $type-size-7;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.featured-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  color: var(--global-text-color);
+  font-weight: 700;
+  text-decoration: none !important;
+
+  &:hover {
+    color: var(--global-base-color);
+    text-decoration: underline !important;
+  }
+}
+
+.home-stack-section {
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .impact-card,
+[data-theme="dark"] .focus-card,
+[data-theme="dark"] .home-win-card,
+[data-theme="dark"] .featured-card {
+  background: #1a2330;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="dark"] .home-hero {
+  border-color: rgba(88, 166, 255, 0.14);
+  border-left-color: #58a6ff;
+  background: #0f1724;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.22);
+  color: #f7fafc;
+}
+
+[data-theme="dark"] .home-hero:before {
+  border-top-color: rgba(88, 166, 255, 0.24);
+  border-left-color: rgba(88, 166, 255, 0.24);
+}
+
+[data-theme="dark"] .home-hero:after {
+  background: rgba(88, 166, 255, 0.08);
+}
+
+[data-theme="dark"] .home-hero .home-eyebrow,
+[data-theme="dark"] .recruiter-card__eyebrow {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+[data-theme="dark"] .home-hero__title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .home-hero__lead {
+  color: rgba(240, 249, 255, 0.86);
+}
+
+[data-theme="dark"] .home-hero .home-btn--secondary {
+  color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+[data-theme="dark"] .home-hero .home-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.36) !important;
+}
+
+[data-theme="dark"] .home-inline-link {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .home-inline-link:hover {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .recruiter-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #182535;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="dark"] .recruiter-card__photo {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+}
+
+[data-theme="dark"] .recruiter-card__name {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .recruiter-card__summary {
+  color: rgba(240, 249, 255, 0.78);
+}
+
+[data-theme="dark"] .recruiter-card__list a,
+[data-theme="dark"] .recruiter-card__list li {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+[data-theme="dark"] .recruiter-card__list a:hover {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .recruiter-card__list i {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .project-tags {

@@ -243,3 +243,104 @@
     }
   }
 }
+
+
+/*
+   Projects cards page
+   ========================================================================== */
+
+.archive--projects-cards {
+  margin-top: 0;
+}
+
+.archive--projects-cards .projects-section {
+  margin-top: 0;
+}
+
+.archive--projects-cards .home-section__header h2 {
+  font-size: clamp(1.02rem, 1.55vw, 1.28rem);
+  font-weight: 400;
+  color: var(--global-text-color-light);
+}
+
+.archive--projects-cards .projects-card-grid {
+  @include breakpoint($medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.archive--projects-cards .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top: 6px solid #0d7377;
+}
+
+.archive--projects-cards .project-card h3 {
+  font-size: clamp(1.28rem, 2.25vw, 1.72rem);
+  line-height: 1.12;
+}
+
+.archive--projects-cards .project-card--dark {
+  border-top-color: #11233a;
+  background: #11233a;
+  border-color: #11233a;
+}
+
+.archive--projects-cards .project-card--sand {
+  border-top-color: #29465f;
+  background: #f4f0e6;
+}
+
+.archive--projects-cards .project-card--mint {
+  border-top-color: #0d7377;
+  background: #eef5f4;
+}
+
+.archive--projects-cards .project-card__list {
+  margin: 0.95rem 0 0;
+  padding-left: 1.15rem;
+
+  li {
+    margin-bottom: 0.65rem;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.archive--projects-cards .project-card__footer {
+  margin-top: auto;
+}
+
+.archive--projects-cards .project-card--dark .featured-card__kicker,
+.archive--projects-cards .project-card--dark h3 {
+  color: #f8fafc;
+}
+
+.archive--projects-cards .project-card--dark p,
+.archive--projects-cards .project-card--dark .project-card__list li {
+  color: rgba(240, 249, 255, 0.82);
+}
+
+.archive--projects-cards .project-card--dark .home-chip {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #f8fafc;
+}
+
+.archive--projects-cards .project-card--dark .featured-card__link {
+  color: #f8fafc;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+[data-theme="dark"] .archive--projects-cards .project-card--sand,
+[data-theme="dark"] .archive--projects-cards .project-card--mint {
+  background: #1a2330;
+}

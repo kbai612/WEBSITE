@@ -3,47 +3,81 @@ layout: archive
 permalink: /projects/
 title: "Projects"
 author_profile: true
+page_class: "archive--projects-cards"
 ---
 
-**[Retail Customer Churn Prediction & Retention Analytics](https://github.com/kbai612/Customer_Churn_Project)**
-- Developed end-to-end customer churn prediction system achieving 85-92% ROC-AUC by training and comparing Logistic Regression, Random Forest, and XGBoost models on 25,000 customers with 300,000+ behavioral events; implemented SHAP explainability to identify top risk factors and translate insights into actionable retention strategies. 
-- Engineered cloud-based analytics infrastructure using Snowflake data warehouse and dbt for ELT pipeline, designing dimensional star schema with fact tables for RFM analysis, cohort retention tracking, and revenue-at-risk modeling across 250,000+ transactions. 
-- Built interactive Streamlit dashboard with Plotly visualizations enabling real-time customer segmentation, product analytics funnels, and at-risk customer identification; delivered segment-specific retention recommendations with quantified ROI projecting 10-20% churn reduction and $1-3.5M annual revenue savings. 
-- ​Automated feature engineering pipeline processing 42 predictive features across demographics, behavioral patterns, and engagement metrics; generated synthetic retail dataset using Python to simulate realistic customer lifecycles for model training and validation. 
+<section class="home-section projects-section">
+  <div class="home-section__header">
+    <h2>Three examples that show how I build analytics products</h2>
+  </div>
 
-<div class="project-tags">
-  <span class="tag">Python</span>
-  <span class="tag">dbtI</span>
-  <span class="tag">Snowflake</span>
-  <span class="tag">Machine Learning</span>
-  <span class="tag">Data Visuzalization</span>
-</div>
+  <div class="featured-work__grid projects-card-grid">
+    <article class="featured-card project-card project-card--dark">
+      <p class="featured-card__kicker">Retention analytics</p>
+      <h3>Retail Customer Churn Prediction and Retention Analytics</h3>
+      <p>Built an end-to-end churn system that connects feature engineering, warehouse modeling, explainable machine learning, and a Streamlit dashboard designed for retention action.</p>
 
----
+      <ul class="project-card__list">
+        <li>Compared Logistic Regression, Random Forest, and XGBoost across 25,000 customers and 300,000+ behavioral events.</li>
+        <li>Modeled 250,000+ transactions in Snowflake with dbt using a dimensional star schema for RFM, cohorts, and revenue-at-risk reporting.</li>
+        <li>Used SHAP to expose top churn drivers and tied the workflow to projected annual savings of $1M-$3.5M.</li>
+      </ul>
 
-**[Twitter Sentiment Analysis](https://www.mdpi.com/1424-8220/22/8/3048)**
-- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. 
-- The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Python</span>
+          <span class="home-chip">Snowflake</span>
+          <span class="home-chip">dbt</span>
+          <span class="home-chip">XGBoost</span>
+          <span class="home-chip">SHAP</span>
+          <span class="home-chip">Streamlit</span>
+        </div>
+        <a href="https://github.com/kbai612/Customer_Churn_Project" class="featured-card__link" target="_blank" rel="noopener">Open GitHub repo</a>
+      </div>
+    </article>
 
-<div class="project-tags">
-  <span class="tag">Python</span>
-  <span class="tag">Machine Learning</span>
-  <span class="tag">Signal Processing</span>
-  <span class="tag">Data Analysis</span>
-</div>
+    <article class="featured-card project-card project-card--sand">
+      <p class="featured-card__kicker">Published research</p>
+      <h3>Signal Pattern Discovery in Python</h3>
+      <p>Designed an automated workflow for identifying stronger signal bands from power spectra, replacing fixed heuristics with a more objective method.</p>
 
----
+      <ul class="project-card__list">
+        <li>Created a data-driven process that outperformed standard band boundaries by roughly 2x.</li>
+        <li>Focused the work on flexible signal discovery rather than hard-coded assumptions.</li>
+        <li>Turned the analysis into a publishable research output with a production-quality Python workflow behind it.</li>
+      </ul>
 
-**[Cerebro-AI - Tailored AI Study Tool](https://github.com/kbai612/Cerebro-AI)**
-- Sophisticated, locally-hosted study system that utilizes RAG (Retrieval-Augmented Generation) chains for knowledge synthesis and provide assistance in learning key topics through flashcards, example test question generation and content discussion.
-- Integrated Deepseek V3 API and context from a Google Drive as the knoweledge base. Utilizes vector store index and converts knoweledge based into vector database for easier access for the LLM as well as scalablility.
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Python</span>
+          <span class="home-chip">Signal processing</span>
+          <span class="home-chip">Data analysis</span>
+          <span class="home-chip">Research methods</span>
+        </div>
+        <a href="https://www.mdpi.com/1424-8220/22/8/3048" class="featured-card__link" target="_blank" rel="noopener">Read publication</a>
+      </div>
+    </article>
 
-<div class="project-tags">
-  <span class="tag">Python</span>
-  <span class="tag">Gen AI</span>
-  <span class="tag">NLP</span>
-  <span class="tag">LangChain</span>
-</div>
+    <article class="featured-card project-card project-card--mint">
+      <p class="featured-card__kicker">Applied AI build</p>
+      <h3>Cerebro-AI</h3>
+      <p>Built a local study assistant around retrieval-augmented generation so a user can turn their own material into flashcards, practice prompts, and guided review.</p>
 
----
+      <ul class="project-card__list">
+        <li>Designed a RAG workflow for flashcards, example questions, and content discussion.</li>
+        <li>Connected a Google Drive knowledge base to a vector store for efficient retrieval.</li>
+        <li>Integrated DeepSeek V3 API support while keeping the system grounded in user-provided study material.</li>
+      </ul>
 
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Python</span>
+          <span class="home-chip">RAG</span>
+          <span class="home-chip">LangChain</span>
+          <span class="home-chip">Vector search</span>
+        </div>
+        <a href="https://github.com/kbai612/Cerebro-AI" class="featured-card__link" target="_blank" rel="noopener">Open GitHub repo</a>
+      </div>
+    </article>
+  </div>
+</section>
