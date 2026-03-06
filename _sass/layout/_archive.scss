@@ -283,6 +283,18 @@
   line-height: 1.12;
 }
 
+.archive--projects-cards .project-card__school {
+  margin: 0.42rem 0 0;
+  color: var(--global-text-color);
+  font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.archive--projects-cards .experience-card__meta {
+  font-size: clamp(0.86rem, 1.28vw, 0.98rem);
+}
+
 .archive--projects-cards .project-card--dark {
   border-top-color: #10233e;
 }
@@ -301,7 +313,7 @@
 
   li {
     margin-bottom: 0.65rem;
-    color: var(--global-text-color-light);
+    color: #ffffff;
     line-height: 1.6;
   }
 

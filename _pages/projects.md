@@ -37,24 +37,25 @@ page_class: "archive--projects-cards"
     </article>
 
     <article class="featured-card project-card project-card--sand">
-      <p class="featured-card__kicker">Published research</p>
-      <h3>Signal Pattern Discovery in Python</h3>
-      <p>Designed an automated workflow for identifying stronger signal bands from power spectra, replacing fixed heuristics with a more objective method.</p>
+      <p class="featured-card__kicker">Reinforcement learning</p>
+      <h3>Deep Q-Learning Snake AI</h3>
+      <p>Built a Deep Q-Network agent in PyTorch to learn Snake through self-play, with an end-to-end training loop, replay memory, and performance tracking.</p>
 
       <ul class="project-card__list">
-        <li>Created a data-driven process that outperformed standard band boundaries by roughly 2x.</li>
-        <li>Focused the work on flexible signal discovery rather than hard-coded assumptions.</li>
-        <li>Turned the analysis into a publishable research output with a production-quality Python workflow behind it.</li>
+        <li>Engineered an 11-feature state representation for danger detection, direction context, and food position to drive action decisions.</li>
+        <li>Implemented experience replay with an epsilon-greedy policy to stabilize learning and improve exploration-to-exploitation balance.</li>
+        <li>Trained and evaluated the agent across hundreds of games, showing clear score progression and stronger collision-avoidance behavior.</li>
       </ul>
 
       <div class="project-card__footer">
         <div class="home-chip-row">
           <span class="home-chip">Python</span>
-          <span class="home-chip">Signal processing</span>
-          <span class="home-chip">Data analysis</span>
-          <span class="home-chip">Research methods</span>
+          <span class="home-chip">PyTorch</span>
+          <span class="home-chip">DQN</span>
+          <span class="home-chip">Reinforcement Learning</span>
+          <span class="home-chip">Pygame</span>
         </div>
-        <a href="https://www.mdpi.com/1424-8220/22/8/3048" class="featured-card__link" target="_blank" rel="noopener">Read publication</a>
+        <a href="https://github.com/kbai612/Reinforcement_Learning_Snake" class="featured-card__link" target="_blank" rel="noopener">Open GitHub repo</a>
       </div>
     </article>
 

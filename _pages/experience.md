@@ -13,7 +13,7 @@ page_class: "archive--projects-cards"
 
   <div class="featured-work__grid projects-card-grid">
     <article class="featured-card project-card project-card--dark">
-      <p class="featured-card__kicker">StackAdapt | Aug 2023 - Present</p>
+      <p class="featured-card__kicker experience-card__meta">StackAdapt | Aug 2023 - Present</p>
       <h3>Data Analyst II, Technical Operations</h3>
       <p>Lead analytics products and experimentation for CTV monetization, fraud prevention, and platform quality.</p>
 
@@ -37,7 +37,7 @@ page_class: "archive--projects-cards"
     </article>
 
     <article class="featured-card project-card project-card--sand">
-      <p class="featured-card__kicker">BrokerLink | Dec 2021 - May 2023</p>
+      <p class="featured-card__kicker experience-card__meta">BrokerLink | Dec 2021 - May 2023</p>
       <h3>Business Intelligence Analyst</h3>
       <p>Built underwriting and retention analytics workflows that supported commercial decision-making and operational efficiency.</p>
 
@@ -62,23 +62,42 @@ page_class: "archive--projects-cards"
 
     <article class="featured-card project-card project-card--mint">
       <p class="featured-card__kicker">Education</p>
-      <h3>Georgia Tech + University of Waterloo</h3>
-      <p>Formal training in analytics, statistical modeling, optimization, and business strategy that supports end-to-end BI delivery.</p>
+      <h3>M.S. Computational Analytics (Data Science)</h3>
+      <p class="project-card__school">Georgia Institute of Technology</p>
+      <p>Focused on statistical modeling, machine learning, and production analytics workflows.</p>
 
       <ul class="project-card__list">
-        <li><strong>Georgia Institute of Technology</strong>: M.S. Computational Analytics (Data Science).</li>
-        <li>Graduate coursework: Bayesian statistics, time series forecasting, simulation, deep learning, data visualization, and MLOps.</li>
-        <li><strong>University of Waterloo</strong>: B.A. Accounting and Financial Management.</li>
-        <li>Foundation in statistical analysis, quantitative finance, and business strategy.</li>
+        <li>Graduate coursework in Bayesian statistics, time series forecasting, simulation, deep learning, data visualization, and MLOps.</li>
+        <li>Applied advanced analytics methods to business and product-facing decision problems.</li>
       </ul>
 
       <div class="project-card__footer">
         <div class="home-chip-row">
           <span class="home-chip">Machine Learning</span>
-          <span class="home-chip">Statistics</span>
+          <span class="home-chip">Bayesian Statistics</span>
           <span class="home-chip">Forecasting</span>
-          <span class="home-chip">Optimization</span>
-          <span class="home-chip">Data Visualization</span>
+          <span class="home-chip">MLOps</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="featured-card project-card project-card--dark">
+      <p class="featured-card__kicker">Education</p>
+      <h3>B.A. Accounting and Financial Management</h3>
+      <p class="project-card__school">University of Waterloo</p>
+      <p>Built a quantitative foundation in finance, strategy, and statistical analysis.</p>
+
+      <ul class="project-card__list">
+        <li>Coursework included quantitative finance, stochastic processes, multivariable calculus, and equity investments.</li>
+        <li>Built core business and analytical reasoning skills used in BI and commercial analytics roles.</li>
+      </ul>
+
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Quantitative Finance</span>
+          <span class="home-chip">Business Strategy</span>
+          <span class="home-chip">Statistical Analysis</span>
+          <span class="home-chip">Stochastic Processes</span>
         </div>
       </div>
     </article>
