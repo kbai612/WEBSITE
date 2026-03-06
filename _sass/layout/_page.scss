@@ -573,10 +573,10 @@
   display: grid;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid rgba(16, 35, 62, 0.08);
+  border: 1px solid rgba(16, 35, 62, 0.12);
   border-radius: 18px;
-  background: #11233a;
-  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.16);
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.09);
 
   @include breakpoint($small) {
     grid-template-columns: 112px minmax(0, 1fr);
@@ -609,14 +609,14 @@
 
 .recruiter-card__name {
   margin: 0.35rem 0 0;
-  color: #f8fafc;
+  color: #10233e;
   font-size: clamp(1.8rem, 2.8vw, 2.35rem);
   line-height: 1.05;
 }
 
 .recruiter-card__summary {
   margin: 0.65rem 0 0;
-  color: rgba(240, 249, 255, 0.78);
+  color: #44566d;
   font-size: $type-size-6;
   line-height: 1.55;
 }
@@ -639,19 +639,19 @@
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(16, 35, 62, 0.86);
     text-decoration: none !important;
   }
 
   a:hover {
-    color: #ffffff;
+    color: #0d7377;
     text-decoration: underline !important;
   }
 
   i {
     width: 1rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.68);
+    color: rgba(16, 35, 62, 0.55);
   }
 
   span {
@@ -699,26 +699,26 @@
 }
 
 .impact-card:first-child {
-  background: #11233a;
-  border-color: #11233a;
+  background: #fbfaf6;
+  border-color: rgba(16, 35, 62, 0.16);
 }
 
 .impact-card:first-child .impact-card__value,
 .impact-card:first-child .impact-card__label,
 .impact-card:first-child .impact-card__context {
-  color: #f8fafc;
+  color: #10233e;
 }
 
 .impact-card:nth-child(2) {
-  background: #eef5f4;
+  background: #fbfaf6;
 }
 
 .impact-card:nth-child(3) {
-  background: #f4f0e6;
+  background: #fbfaf6;
 }
 
 .impact-card:nth-child(4) {
-  background: #eef3fb;
+  background: #fbfaf6;
 }
 
 .impact-card__value {
@@ -910,6 +910,17 @@
   border-color: rgba(255, 255, 255, 0.12);
   background: #182535;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="dark"] .impact-card:first-child {
+  background: #11233a;
+  border-color: #11233a;
+}
+
+[data-theme="dark"] .impact-card:first-child .impact-card__value,
+[data-theme="dark"] .impact-card:first-child .impact-card__label,
+[data-theme="dark"] .impact-card:first-child .impact-card__context {
+  color: #f8fafc;
 }
 
 [data-theme="dark"] .recruiter-card__photo {
