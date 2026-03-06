@@ -698,17 +698,6 @@
   &:nth-child(4) { animation-delay: 0.3s; }
 }
 
-.impact-card:first-child {
-  background: #fbfaf6;
-  border-color: rgba(16, 35, 62, 0.16);
-}
-
-.impact-card:first-child .impact-card__value,
-.impact-card:first-child .impact-card__label,
-.impact-card:first-child .impact-card__context {
-  color: #10233e;
-}
-
 .impact-card:nth-child(2) {
   background: #fbfaf6;
 }
@@ -910,17 +899,6 @@
   border-color: rgba(255, 255, 255, 0.12);
   background: #182535;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
-}
-
-[data-theme="dark"] .impact-card:first-child {
-  background: #11233a;
-  border-color: #11233a;
-}
-
-[data-theme="dark"] .impact-card:first-child .impact-card__value,
-[data-theme="dark"] .impact-card:first-child .impact-card__label,
-[data-theme="dark"] .impact-card:first-child .impact-card__context {
-  color: #f8fafc;
 }
 
 [data-theme="dark"] .recruiter-card__photo {

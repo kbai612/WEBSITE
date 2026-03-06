@@ -3,31 +3,84 @@ layout: archive
 permalink: /experience/
 title: "Experience"
 author_profile: true
+page_class: "archive--projects-cards"
 ---
 
-## Work Experience
+<section class="home-section projects-section">
+  <div class="home-section__header">
+    <h2>Roles and outcomes across adtech, insurance, and analytics engineering</h2>
+  </div>
 
-**Data Analyst II, Technical Operations @ StackAdapt (_August 2023 – Present_)**
--	Increased YoY CTV product revenue by over 150% through leading an innovative media encoding pipeline feature, enabling revenue from key industry players such as Disney, NBCU and Paramount. Coordinated cross-functionally with engineering, product, marketing and revenue teams to roll out the project into production.
--	Reduced fraudulent ad placements to less than 3% across the platform through developing data models in dbt and executive dashboards in Tableau to monitor and alert anomalies that occur in real time. Also reduced investigation time for the team by over 70% allowing for faster turnaround and action.
--	Improved platform-wide CTV revenue to impression ratio by 25% through orchestrating end-to-end A/B testing frameworks to validate and optimize backend algorithms, independently scoping ambiguous problem spaces, establishing success metrics, and setting up frameworks to ensure non-biased testing.
--	Increased automated feature adoption by 50% and reduced platform misuse by analyzing transaction data to uncover 35% feature underutilization, then partnering cross-functionally with product and engineering teams to define success metrics and implement data-driven product improvements.
--	Ensured 99% data accuracy for fraud detection and reporting by transforming and analyzing large-scale event data (bid requests, impressions, clicks) using Spark, Python, and big data tools (Redshift, Airflow, Snowflake), designing scalable dbt pipelines with automated quality testing and validation rules.
+  <div class="featured-work__grid projects-card-grid">
+    <article class="featured-card project-card project-card--dark">
+      <p class="featured-card__kicker">StackAdapt | Aug 2023 - Present</p>
+      <h3>Data Analyst II, Technical Operations</h3>
+      <p>Lead analytics products and experimentation for CTV monetization, fraud prevention, and platform quality.</p>
 
-**Business Intelligence Analyst @ BrokerLink (_December 2021 – May 2023_)**
--	Collaborated with Revenue and Leadership teams to implement a data-driven underwriting strategy, leveraging advanced analytics to reduce the average claim value by 12% and improve the loss ratio by 5% over 3 fiscal quarters.
--	Designed and implemented scalable data pipelines on AWS using Glue, Lambda, and S3, integrating with MariaDB for efficient data management, resulting in a 50% reduction in data processing time and saving the team approximately 20 hours per week on data-related tasks.
--	Spearheaded data visualization projects using Power BI for the commercial lines department, creating interactive dashboards to monitor KPIs, line health, and action items, resulting in a 15% improvement in data-driven decision-making and a 10% reduction in response time to critical alerts.
--	Developed retention analysis using XGBoost method applied in Python for binary classification model and outputs with identification of clients with most likelihood of cancellation for stakeholder teams to proactively re-market, leading to an increase in commercial lines account retention by 40% from Q4 to Q1.
+      <ul class="project-card__list">
+        <li>Increased YoY CTV revenue by 150%+ by launching a media encoding pipeline feature used by major publishers.</li>
+        <li>Reduced fraudulent ad placements to under 3% and cut investigation time by 70% with dbt models and executive dashboards.</li>
+        <li>Improved CTV revenue-to-impression ratio by 25% through end-to-end A/B test design, metric definition, and analysis.</li>
+        <li>Raised automated feature adoption by 50% after surfacing 35% underutilization and partnering with product and engineering on improvements.</li>
+      </ul>
 
----
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">SQL</span>
+          <span class="home-chip">Python</span>
+          <span class="home-chip">dbt</span>
+          <span class="home-chip">Tableau</span>
+          <span class="home-chip">Spark</span>
+          <span class="home-chip">Snowflake</span>
+        </div>
+      </div>
+    </article>
 
-## Education
+    <article class="featured-card project-card project-card--sand">
+      <p class="featured-card__kicker">BrokerLink | Dec 2021 - May 2023</p>
+      <h3>Business Intelligence Analyst</h3>
+      <p>Built underwriting and retention analytics workflows that supported commercial decision-making and operational efficiency.</p>
 
-**Georgia Institute of Technology** | M.S. Computational Analytics (Data Science)  
-Regression Analysis, Bayesian Statistics, Time Series Forecasting, Simulation, Deep Learning, Data Visualization, MLOps, Graduate Level Algorithmns
+      <ul class="project-card__list">
+        <li>Helped reduce average claim value by 12% and improved loss ratio by 5% over three fiscal quarters.</li>
+        <li>Built AWS pipelines with Glue, Lambda, and S3, cutting processing time by 50% and saving about 20 analyst hours weekly.</li>
+        <li>Developed Power BI dashboards for KPI and alert monitoring, improving decision speed by 15% and alert response time by 10%.</li>
+        <li>Delivered retention modeling in Python with XGBoost that supported a 40% Q4-to-Q1 lift in commercial lines retention.</li>
+      </ul>
 
-**University of Waterloo** | B.A. Accounting and Financial Management  
-Statistical Analysis, Business Strategy, Equity Investments, Quantitative Finance, Stochastic Processes and Applications, Multivariable Calculus
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Power BI</span>
+          <span class="home-chip">Python</span>
+          <span class="home-chip">XGBoost</span>
+          <span class="home-chip">AWS</span>
+          <span class="home-chip">Lambda</span>
+          <span class="home-chip">Glue</span>
+        </div>
+      </div>
+    </article>
 
----
+    <article class="featured-card project-card project-card--mint">
+      <p class="featured-card__kicker">Education</p>
+      <h3>Georgia Tech + University of Waterloo</h3>
+      <p>Formal training in analytics, statistical modeling, optimization, and business strategy that supports end-to-end BI delivery.</p>
+
+      <ul class="project-card__list">
+        <li><strong>Georgia Institute of Technology</strong>: M.S. Computational Analytics (Data Science).</li>
+        <li>Graduate coursework: Bayesian statistics, time series forecasting, simulation, deep learning, data visualization, and MLOps.</li>
+        <li><strong>University of Waterloo</strong>: B.A. Accounting and Financial Management.</li>
+        <li>Foundation in statistical analysis, quantitative finance, and business strategy.</li>
+      </ul>
+
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Machine Learning</span>
+          <span class="home-chip">Statistics</span>
+          <span class="home-chip">Forecasting</span>
+          <span class="home-chip">Optimization</span>
+          <span class="home-chip">Data Visualization</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
