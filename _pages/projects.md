@@ -8,7 +8,7 @@ page_class: "archive--projects-cards"
 
 <section class="home-section projects-section">
   <div class="home-section__header">
-    <h2>Three examples that show how I build analytics products</h2>
+    <h2>Four examples that show how I build analytics products</h2>
   </div>
 
   <div class="featured-work__grid projects-card-grid">
@@ -33,6 +33,31 @@ page_class: "archive--projects-cards"
           <span class="home-chip">Streamlit</span>
         </div>
         <a href="https://github.com/kbai612/Customer_Churn_Project" class="featured-card__link" target="_blank" rel="noopener">Open GitHub repo</a>
+      </div>
+    </article>
+
+    <article class="featured-card project-card project-card--mint">
+      <p class="featured-card__kicker">Data product build</p>
+      <h3>BaiBeta Climbing Shoe Price Tracker</h3>
+      <p>Built a full-stack tracking product that ingests Canadian climbing shoe pricing daily and surfaces actionable deals through search, trends, and watchlist alerts.</p>
+
+      <ul class="project-card__list">
+        <li>Built and managed a Supabase-backed pricing pipeline in TypeScript, using Prisma models to normalize daily store data and persist historical snapshots for trend analysis.</li>
+        <li>Implemented a Next.js App Router experience with filters for brand, store, discount, size, and stock, plus Recharts-based history views so users can validate whether a sale is genuinely attractive.</li>
+        <li>Applied CI/CD practices with automated quality checks and deployment workflows, while shipping Auth.js login, watchlists, and deduplicated email alerts to improve reliability and user retention.</li>
+      </ul>
+
+      <div class="project-card__footer">
+        <div class="home-chip-row">
+          <span class="home-chip">Next.js</span>
+          <span class="home-chip">TypeScript</span>
+          <span class="home-chip">Prisma</span>
+          <span class="home-chip">Supabase</span>
+          <span class="home-chip">Auth.js</span>
+          <span class="home-chip">CI/CD</span>
+          <span class="home-chip">Recharts</span>
+        </div>
+        <a href="https://baibeta.com" class="featured-card__link" target="_blank" rel="noopener">Visit website</a>
       </div>
     </article>
 
