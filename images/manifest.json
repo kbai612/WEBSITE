@@ -1,0 +1,14 @@
+{
+  "name": "Kevin Bai",
+  "short_name": "Kevin Bai",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "783x783",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

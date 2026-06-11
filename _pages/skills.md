@@ -5,210 +5,208 @@ title: "Skills & Expertise"
 author_profile: true
 ---
 
-<div class="skills-intro">
-End-to-end coverage across the analytics stack, from pipeline orchestration and cloud data systems to production modeling and executive dashboards.
-</div>
-
-## Programming & Analysis
-<div class="skill-grid">
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy" decoding="async">
-      <strong>Python</strong>
+<div class="v2-skill-group">
+  <h3 class="v2-skill-group__title">Programming<br>&amp; Analysis</h3>
+  <div class="v2-skill-rows">
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Python</strong>
+      </div>
+      <span>Pandas, NumPy, scikit-learn, TensorFlow, PySpark workflows</span>
     </div>
-    <p>Pandas, NumPy, scikit-learn, TensorFlow, and PySpark workflows</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo" loading="lazy" decoding="async">
-      <strong>PostgreSQL</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>PostgreSQL</strong>
+      </div>
+      <span>Schema design, indexing, query optimization, analytics modeling</span>
     </div>
-    <p>Schema design, indexing, query optimization, and analytics modeling</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R logo" loading="lazy" decoding="async">
-      <strong>R</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>R</strong>
+      </div>
+      <span>Statistical analysis, hypothesis testing, predictive modeling</span>
     </div>
-    <p>Statistical analysis, hypothesis testing, and predictive modeling</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter logo" loading="lazy" decoding="async">
-      <strong>Jupyter</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Jupyter</strong>
+      </div>
+      <span>Notebook-based analysis, experimentation, model prototyping</span>
     </div>
-    <p>Notebook-based analysis, experimentation, and model prototyping</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy logo" loading="lazy" decoding="async">
-      <strong>NumPy</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>NumPy</strong>
+      </div>
+      <span>Vectorized computation, numerical methods, performant transforms</span>
     </div>
-    <p>Vectorized computation, numerical methods, and performant transforms</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas logo" loading="lazy" decoding="async">
-      <strong>Pandas</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Pandas</strong>
+      </div>
+      <span>Data wrangling, feature engineering, time-series preparation</span>
     </div>
-    <p>Data wrangling, feature engineering, and time-series preparation</p>
   </div>
 </div>
 
----
-
-## Data Engineering & Platform
-<div class="skill-grid">
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Apache Airflow logo" loading="lazy" decoding="async">
-      <strong>Apache Airflow</strong>
+<div class="v2-skill-group">
+  <h3 class="v2-skill-group__title">Data Engineering<br>&amp; Platform</h3>
+  <div class="v2-skill-rows">
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Apache Airflow</strong>
+      </div>
+      <span>DAG orchestration, dependency management, scheduled workflows</span>
     </div>
-    <p>DAG orchestration, dependency management, and scheduled workflows</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="Apache Spark logo" loading="lazy" decoding="async">
-      <strong>Apache Spark</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Apache Spark</strong>
+      </div>
+      <span>Distributed compute, large-scale transforms, ETL acceleration</span>
     </div>
-    <p>Distributed compute, large-scale transforms, and ETL acceleration</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/databricks.svg" alt="Databricks logo" loading="lazy" decoding="async">
-      <strong>Databricks</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/databricks.svg" alt="" loading="lazy" decoding="async">
+        <strong>Databricks</strong>
+      </div>
+      <span>Lakehouse workflows, notebook collaboration, production jobs</span>
     </div>
-    <p>Lakehouse workflows, notebook collaboration, and production jobs</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo" loading="lazy" decoding="async">
-      <strong>Docker</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Docker</strong>
+      </div>
+      <span>Containerized services, reproducible environments, local parity</span>
     </div>
-    <p>Containerized services, reproducible environments, and local parity</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform logo" loading="lazy" decoding="async">
-      <strong>Terraform</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Terraform</strong>
+      </div>
+      <span>Infrastructure as code for cloud provisioning and environment control</span>
     </div>
-    <p>Infrastructure as code for cloud provisioning and environment control</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions logo" loading="lazy" decoding="async">
-      <strong>GitHub Actions</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>GitHub Actions</strong>
+      </div>
+      <span>CI/CD pipelines, automated checks, deployment workflows</span>
     </div>
-    <p>CI/CD pipelines, automated checks, and deployment workflows</p>
-  </div>
-</div>
-
----
-
-## Cloud & Warehousing
-<div class="skill-grid">
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg" alt="AWS logo" loading="lazy" decoding="async">
-      <strong>AWS</strong>
-    </div>
-    <p>Redshift, Glue, Lambda, and S3 data platform architecture</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure logo" loading="lazy" decoding="async">
-      <strong>Azure</strong>
-    </div>
-    <p>Analytics services, storage integration, and enterprise deployment</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-cloud-platform.svg" alt="Google Cloud logo" loading="lazy" decoding="async">
-      <strong>Google Cloud</strong>
-    </div>
-    <p>Managed analytics services and scalable cloud-native workloads</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.simpleicons.org/snowflake" alt="Snowflake logo" loading="lazy" decoding="async">
-      <strong>Snowflake</strong>
-    </div>
-    <p>Warehouse modeling, secure sharing, and performance tuning</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.simpleicons.org/googlebigquery" alt="Google BigQuery logo" loading="lazy" decoding="async">
-      <strong>BigQuery</strong>
-    </div>
-    <p>Serverless analytics, partitioned tables, and high-volume SQL</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo" loading="lazy" decoding="async">
-      <strong>Data Warehousing</strong>
-    </div>
-    <p>Dimensional modeling, governance standards, and data quality controls</p>
   </div>
 </div>
 
----
-
-## Machine Learning & Visualization
-<div class="skill-grid">
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn logo" loading="lazy" decoding="async">
-      <strong>scikit-learn</strong>
+<div class="v2-skill-group">
+  <h3 class="v2-skill-group__title">Cloud<br>&amp; Warehousing</h3>
+  <div class="v2-skill-rows">
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg" alt="" loading="lazy" decoding="async">
+        <strong>AWS</strong>
+      </div>
+      <span>Redshift, Glue, Lambda, S3 data platform architecture</span>
     </div>
-    <p>Feature pipelines, model validation, and classical ML productionization</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow logo" loading="lazy" decoding="async">
-      <strong>TensorFlow</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Azure</strong>
+      </div>
+      <span>Analytics services, storage integration, enterprise deployment</span>
     </div>
-    <p>Neural networks, deep learning experiments, and model iteration</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch logo" loading="lazy" decoding="async">
-      <strong>PyTorch</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-cloud-platform.svg" alt="" loading="lazy" decoding="async">
+        <strong>Google Cloud</strong>
+      </div>
+      <span>Managed analytics services and scalable cloud-native workloads</span>
     </div>
-    <p>Model prototyping, experimentation, and GPU-enabled training</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/powerbi.svg" alt="Power BI logo" loading="lazy" decoding="async">
-      <strong>Power BI</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" loading="lazy" decoding="async">
+        <strong>Snowflake</strong>
+      </div>
+      <span>Warehouse modeling, secure sharing, performance tuning</span>
     </div>
-    <p>DAX modeling, semantic layers, and executive-ready reporting</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.simpleicons.org/looker" alt="Looker logo" loading="lazy" decoding="async">
-      <strong>Looker</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.simpleicons.org/googlebigquery/4285F4" alt="" loading="lazy" decoding="async">
+        <strong>BigQuery</strong>
+      </div>
+      <span>Serverless analytics, partitioned tables, high-volume SQL</span>
     </div>
-    <p>LookML modeling, governed explores, and self-serve analytics</p>
-  </div>
-  <div class="skill-item">
-    <div class="skill-header">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-excel.svg" alt="Microsoft Excel logo" loading="lazy" decoding="async">
-      <strong>Microsoft Excel</strong>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>Data Warehousing</strong>
+      </div>
+      <span>Dimensional modeling, governance standards, data quality controls</span>
     </div>
-    <p>Advanced formulas, pivots, scenario analysis, and stakeholder delivery</p>
   </div>
 </div>
 
----
+<div class="v2-skill-group">
+  <h3 class="v2-skill-group__title">ML<br>&amp; Visualization</h3>
+  <div class="v2-skill-rows">
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>scikit-learn</strong>
+      </div>
+      <span>Feature pipelines, model validation, classical ML productionization</span>
+    </div>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>TensorFlow</strong>
+      </div>
+      <span>Neural networks, deep learning experiments, model iteration</span>
+    </div>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" decoding="async">
+        <strong>PyTorch</strong>
+      </div>
+      <span>Model prototyping, experimentation, GPU-enabled training</span>
+    </div>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/powerbi.svg" alt="" loading="lazy" decoding="async">
+        <strong>Power BI</strong>
+      </div>
+      <span>DAX modeling, semantic layers, executive-ready reporting</span>
+    </div>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.simpleicons.org/looker/4285F4" alt="" loading="lazy" decoding="async">
+        <strong>Looker</strong>
+      </div>
+      <span>LookML modeling, governed explores, self-serve analytics</span>
+    </div>
+    <div class="v2-skill-row">
+      <div class="v2-skill-name">
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-excel.svg" alt="" loading="lazy" decoding="async">
+        <strong>Microsoft Excel</strong>
+      </div>
+      <span>Advanced formulas, pivots, scenario analysis, stakeholder delivery</span>
+    </div>
+  </div>
+</div>
 
-## Domain Expertise
-<div class="skill-tags-section">
-  <span class="domain-tag">Product Analytics</span>
-  <span class="domain-tag">Revenue Optimization</span>
-  <span class="domain-tag">Fraud Detection</span>
-  <span class="domain-tag">Customer Retention</span>
-  <span class="domain-tag">KPI Development</span>
-  <span class="domain-tag">Data Governance</span>
-  <span class="domain-tag">Cross-functional Leadership</span>
-  <span class="domain-tag">Stakeholder Communication</span>
+<div class="v2-domain-section">
+  <h3 class="v2-skill-group__title">Domain Expertise</h3>
+  <ul class="v2-domain-list">
+    <li>Product Analytics</li>
+    <li>Revenue Optimization</li>
+    <li>Fraud Detection</li>
+    <li>Customer Retention</li>
+    <li>KPI Development</li>
+    <li>Data Governance</li>
+    <li>Cross-functional Leadership</li>
+    <li>Stakeholder Communication</li>
+  </ul>
 </div>
