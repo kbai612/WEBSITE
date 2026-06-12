@@ -86,10 +86,10 @@ author_profile: true
     </div>
     <div class="v2-skill-row">
       <div class="v2-skill-name">
-        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="" loading="lazy" decoding="async">
-        <strong>Terraform</strong>
+        <img class="v2-skill-icon" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dbt.svg" alt="" loading="lazy" decoding="async" style="filter: brightness(0) saturate(100%) invert(52%) sepia(80%) saturate(600%) hue-rotate(330deg) brightness(105%);">
+        <strong>dbt</strong>
       </div>
-      <span>Infrastructure as code for cloud provisioning and environment control</span>
+      <span>Modular SQL transforms, testing, documentation, lineage tracking</span>
     </div>
     <div class="v2-skill-row">
       <div class="v2-skill-name">

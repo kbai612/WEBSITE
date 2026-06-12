@@ -70,22 +70,39 @@ redirect_from:
 
 <div class="v2-about-beyond">
   <p class="v2-section-title">Beyond work</p>
-  <div class="v2-hobby-list">
-    <div class="v2-hobby-item">
-      <strong>Rock Climbing</strong>
-      <span>Bouldering and sport climbing &mdash; problem-solving with a physical twist.</span>
+  <div class="v2-hobby-grid">
+
+    <div class="v2-hobby-card">
+      <div class="v2-hobby-card__visual v2-hobby-card__visual--photo">
+        <img src="{{ '/images/climbing.png' | relative_url }}" alt="Rock climbing route illustration" loading="lazy" decoding="async">
+      </div>
+      <strong class="v2-hobby-card__title">Rock Climbing</strong>
+      <p class="v2-hobby-card__desc">Bouldering and sport climbing &mdash; problem-solving with a physical twist.</p>
     </div>
-    <div class="v2-hobby-item">
-      <strong>Photography</strong>
-      <span>Capturing moments and experimenting with composition and light.</span>
+
+    <div class="v2-hobby-card">
+      <div class="v2-hobby-card__visual v2-hobby-card__visual--photo">
+        <img src="{{ '/images/camera.png' | relative_url }}" alt="Sony camera illustration" loading="lazy" decoding="async">
+      </div>
+      <strong class="v2-hobby-card__title">Photography</strong>
+      <p class="v2-hobby-card__desc">Capturing moments and experimenting with composition and light.</p>
     </div>
-    <div class="v2-hobby-item">
-      <strong>Coding Projects</strong>
-      <span>Building side projects, exploring new frameworks, and learning new tech.</span>
+
+    <div class="v2-hobby-card">
+      <div class="v2-hobby-card__visual v2-hobby-card__visual--photo">
+        <img src="{{ '/images/coding.png' | relative_url }}" alt="App wireframe and coding illustration" loading="lazy" decoding="async">
+      </div>
+      <strong class="v2-hobby-card__title">Coding Projects</strong>
+      <p class="v2-hobby-card__desc">Building side projects, exploring new frameworks, and learning new tech.</p>
     </div>
-    <div class="v2-hobby-item">
-      <strong>Crosswords &amp; Puzzles</strong>
-      <span>Daily crosswords, logic puzzles, and the occasional escape room.</span>
+
+    <div class="v2-hobby-card">
+      <div class="v2-hobby-card__visual v2-hobby-card__visual--photo">
+        <img src="{{ '/images/crosswords.png' | relative_url }}" alt="Crossword puzzle illustration" loading="lazy" decoding="async" style="object-fit: cover; object-position: 50.5% center;">
+      </div>
+      <strong class="v2-hobby-card__title">Crosswords &amp; Puzzles</strong>
+      <p class="v2-hobby-card__desc">Daily crosswords, logic puzzles, and the occasional escape room.</p>
     </div>
+
   </div>
 </div>

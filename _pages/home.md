@@ -92,6 +92,10 @@ show_page_meta: false
       <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="" loading="lazy" decoding="async">
       <span>Airflow</span>
     </li>
+    <li>
+      <img class="v3-stack__icon v3-stack__icon--tint" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tableau.svg" alt="" loading="lazy" decoding="async">
+      <span>Tableau</span>
+    </li>
   </ul>
 </section>
 

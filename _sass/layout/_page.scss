@@ -34,6 +34,12 @@
   }
 }
 
+html:has(.page--home),
+body:has(.page--home) {
+  overflow: hidden;
+  height: 100%;
+}
+
 .page--home {
   @include breakpoint($large) {
     @include span(12 of 12);
@@ -1241,7 +1247,7 @@ hr.v3-rule {
   @include breakpoint($large) {
     grid-template-columns: 1fr 260px;
     gap: 4rem;
-    align-items: start;
+    align-items: center;
   }
 }
 
@@ -1595,4 +1601,80 @@ hr.v3-rule {
     color: var(--global-text-color-light);
     line-height: 1.55;
   }
+}
+
+.v2-hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+
+  @include breakpoint(max-width $small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.v2-hobby-card {
+  border: 1px solid var(--v2-rule);
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 1.25rem 1.25rem 1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--v2-accent);
+    transform: translateY(-2px);
+  }
+}
+
+.v2-hobby-card__visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+
+  &--photo {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--global-bg-color);
+    margin: -1.25rem -1.25rem 1rem;
+    border-radius: 3px 3px 0 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: 0 auto;
+      filter: brightness(1.15);
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+[data-theme="dark"] .v2-hobby-card__visual--photo {
+  img {
+    filter: invert(1) hue-rotate(180deg) contrast(1.2);
+    mix-blend-mode: screen;
+  }
+}
+
+.v2-hobby-card__title {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin: 0 0 0.35rem;
+}
+
+.v2-hobby-card__desc {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  line-height: 1.55;
+  margin: 0;
 }
