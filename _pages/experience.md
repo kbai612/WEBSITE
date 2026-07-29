@@ -13,15 +13,16 @@ page_class: "archive--projects-cards"
       <span class="v2-exp-dates">Aug 2023 &ndash; Mar 2026</span>
     </div>
     <div class="v2-exp-content">
-      <h2 class="v2-exp-title">Data Analyst II, Technical Operations</h2>
-      <p class="v2-exp-summary">Lead analytics products and experimentation for CTV monetization, fraud prevention, and platform quality.</p>
+      <h2 class="v2-exp-title">Analytics Engineer, Technical Operations</h2>
+      <p class="v2-exp-summary">Built governed analytics infrastructure, experimentation systems, and revenue-driving data products across CTV, fraud prevention, and internal reporting.</p>
       <ul>
-        <li>Increased YoY CTV revenue by 150%+ by launching a media encoding pipeline feature used by major publishers including Disney, NBCU, and Paramount.</li>
-        <li>Reduced fraudulent ad placements to under 3% and cut investigation time by 70% with dbt models and executive dashboards.</li>
-        <li>Improved CTV revenue-to-impression ratio by 25% through end-to-end A/B test design, metric definition, and analysis.</li>
-        <li>Raised automated feature adoption by 50% after surfacing 35% underutilization and partnering with product and engineering on improvements.</li>
+        <li>Redesigned a legacy ad-fraud detection workflow with automated dbt models, Snowflake marts, and Tableau dashboards, reducing manual investigation time by 70% and improving product-level transparency.</li>
+        <li>Drove more than 150% YoY CTV revenue growth by leading the development and production rollout of a cross-functional media encoding pipeline used by Disney, NBCU, and Paramount.</li>
+        <li>Converted ad hoc requests from finance, revenue, and operations into reusable, version-controlled dbt models, eliminating duplicate logic across eight reports.</li>
+        <li>Built end-to-end A/B testing infrastructure to evaluate backend algorithm changes, informing decisions that increased revenue and improved margin efficiency by 20%.</li>
+        <li>Consolidated fragmented metric definitions across internal teams into governed dbt models, replacing siloed spreadsheet logic with consistent, reproducible reporting.</li>
       </ul>
-      <p class="v2-exp-stack">SQL &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; dbt &nbsp;&middot;&nbsp; Tableau &nbsp;&middot;&nbsp; Spark &nbsp;&middot;&nbsp; Snowflake</p>
+      <p class="v2-exp-stack">dbt &nbsp;&middot;&nbsp; Snowflake &nbsp;&middot;&nbsp; Tableau &nbsp;&middot;&nbsp; SQL &nbsp;&middot;&nbsp; A/B Testing &nbsp;&middot;&nbsp; Data Governance</p>
     </div>
   </div>
 
@@ -34,12 +35,12 @@ page_class: "archive--projects-cards"
       <h2 class="v2-exp-title">Business Intelligence Analyst</h2>
       <p class="v2-exp-summary">Built underwriting and retention analytics workflows that supported commercial decision-making and operational efficiency.</p>
       <ul>
-        <li>Helped reduce average claim value by 12% and improved loss ratio by 5% over three fiscal quarters.</li>
-        <li>Built AWS pipelines with Glue, Lambda, and S3, cutting processing time by 50% and saving about 20 analyst hours weekly.</li>
-        <li>Developed Power BI dashboards for KPI and alert monitoring, improving decision speed by 15% and alert response time by 10%.</li>
-        <li>Delivered retention modeling in Python with XGBoost that supported a 40% Q4-to-Q1 lift in commercial lines retention.</li>
+        <li>Partnered with revenue and leadership teams on a data-driven underwriting strategy that reduced average claim value by 12% and improved loss ratio by 5% over three fiscal quarters.</li>
+        <li>Built scalable AWS pipelines with Glue, Lambda, S3, and MariaDB, cutting processing time by 50% and saving approximately 20 hours per week.</li>
+        <li>Created interactive Power BI dashboards for commercial-lines KPIs, portfolio health, and action items, improving data-driven decision-making by 15% and reducing critical-alert response time by 10%.</li>
+        <li>Developed a Python and XGBoost retention model to identify clients at risk of cancellation, supporting a 40% Q4-to-Q1 increase in commercial-lines account retention.</li>
       </ul>
-      <p class="v2-exp-stack">Power BI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; XGBoost &nbsp;&middot;&nbsp; AWS &nbsp;&middot;&nbsp; Lambda &nbsp;&middot;&nbsp; Glue</p>
+      <p class="v2-exp-stack">AWS &nbsp;&middot;&nbsp; Glue &nbsp;&middot;&nbsp; Lambda &nbsp;&middot;&nbsp; S3 &nbsp;&middot;&nbsp; MariaDB &nbsp;&middot;&nbsp; Power BI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; XGBoost</p>
     </div>
   </div>
 
@@ -49,7 +50,7 @@ page_class: "archive--projects-cards"
       <div class="v2-edu-item">
         <span class="v2-edu-school">Georgia Institute of Technology</span>
         <div>
-          <h3 class="v2-edu-degree">M.S. Computational Analytics</h3>
+          <h3 class="v2-edu-degree">M.S. Computational Analytics (Data Science)</h3>
           <p class="v2-edu-desc">Focused on statistical modeling, machine learning, and production analytics workflows. Graduate coursework in Bayesian statistics, time series forecasting, simulation, deep learning, data visualization, and MLOps.</p>
         </div>
       </div>

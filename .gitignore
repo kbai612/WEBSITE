@@ -26,3 +26,5 @@ Gemfile.lock
 
 #Ignore the Gemfile file
 Gemfile
+.bundle/
+vendor/

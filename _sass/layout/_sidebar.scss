@@ -244,6 +244,15 @@
     white-space: nowrap;
   }
 
+  @media screen and (min-width: $large) and (max-width: $x-large) {
+    li,
+    a {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   a {
     display: block;
     margin-bottom: 5px;

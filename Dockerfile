@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Copy dependency manifests into the container so `bundle install` matches the
-# lockfile that is mounted at runtime.
-COPY Gemfile Gemfile.lock ./
+# The repository intentionally does not commit a lockfile, so install from the
+# shared Gemfile used by GitHub Pages and the local development container.
+COPY Gemfile ./
 
 # Install bundler and dependencies
 RUN gem install bundler:2.3.26 && bundle install

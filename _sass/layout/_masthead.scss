@@ -9,9 +9,6 @@
   height: $masthead-height;
   top: 0;
   width: 100%;
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
-  backdrop-filter: saturate(180%) blur(12px);
-
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
@@ -23,6 +20,7 @@
     @include clearfix;
     display: flex;
     align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
     height: 100%;
     padding: 0.25em 1em;
     font-family: $sans-serif-narrow;
@@ -48,12 +46,100 @@
 }
 
 .masthead__menu {
+  flex: 1;
+  min-width: 0;
+
+  .greedy-nav {
+    justify-content: center;
+    background: transparent;
+  }
 
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+  color: var(--global-text-color);
+  white-space: nowrap;
+}
+
+.site-brand__mark {
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.site-brand__name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.18rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.masthead__actions {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+@include breakpoint(max-width $medium-wide) {
+  .masthead__inner-wrap {
+    gap: 0.75rem;
+  }
+
+  .site-brand__name {
+    display: none;
+  }
+}
+
+@include breakpoint(max-width $small) {
+  .masthead__inner-wrap {
+    position: relative;
+    gap: 0.25rem;
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
+  }
+
+  .site-brand {
+    display: none;
+  }
+
+  .masthead__menu {
+    padding-right: 2.2rem;
+  }
+
+  .masthead__actions {
+    position: absolute;
+    right: 0.65rem;
+    z-index: 12;
+    background: var(--global-bg-color);
+  }
+
+  .masthead__menu .greedy-nav a {
+    padding-right: 0.44rem;
+    padding-left: 0.44rem;
+    font-size: 0.59rem;
+  }
+
+  .masthead__menu .greedy-nav .visible-links {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .theme-toggle {
+    padding: 0;
+  }
+
+  .theme-toggle__btn {
+    width: 1.9rem;
+    height: 1.9rem;
   }
 }
 

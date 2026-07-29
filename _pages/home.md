@@ -9,93 +9,113 @@ show_page_header: false
 show_page_meta: false
 ---
 
-<section class="v3-hero">
-  <div class="v3-hero__content">
-    <p class="v3-eyebrow">Analytics &amp; BI &nbsp;&middot;&nbsp; Toronto</p>
-    <h1 class="v3-headline">I turn product and customer data into measurable revenue, retention, and fraud-prevention wins.</h1>
+<section class="editorial-home" aria-labelledby="editorial-home-title">
+  <div class="editorial-home__stage">
+    <div class="editorial-home__intro">
+      <p class="editorial-home__role">Analytics &amp; BI <span aria-hidden="true">&middot;</span> Toronto</p>
+      <h1 id="editorial-home-title" class="editorial-home__title">
+        <span>Data / Analytics</span>
+        <em>Professional.</em>
+      </h1>
 
+      <ul class="editorial-home__disciplines" aria-label="Areas of expertise">
+        <li>Analytics</li>
+        <li>Data Engineering</li>
+        <li>Machine Learning</li>
+      </ul>
+
+      <p class="editorial-home__summary">I turn product and customer data into measurable revenue, retention, and fraud-prevention wins.</p>
+
+      <a class="editorial-home__project-link" href="{{ '/projects/' | relative_url }}" aria-label="View Stokd, a recipe saver and pantry app">
+        <span class="editorial-home__project-meta">Featured project / Stokd</span>
+        <strong>iOS app for recipe importing, pantry tracking and guided cooking</strong>
+        <span class="editorial-home__project-arrow" aria-hidden="true">&nearr;</span>
+      </a>
+    </div>
+
+    <figure class="editorial-home__portrait">
+      <div class="editorial-home__portrait-frame">
+        <img
+          src="{{ site.author.avatar | prepend: '/images/' | relative_url }}"
+          alt="Kevin Bai standing beneath flowering trees"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <aside class="editorial-home__impact" aria-label="Career impact">
+      <div class="editorial-home__metric">
+        <span class="editorial-home__metric-label">Years of<br>experience</span>
+        <strong>5+</strong>
+      </div>
+      <div class="editorial-home__metric">
+        <span class="editorial-home__metric-label">CTV revenue<br>growth</span>
+        <strong>150%</strong>
+      </div>
+      <div class="editorial-home__metric">
+        <span class="editorial-home__metric-label">Faster fraud<br>investigations</span>
+        <strong>70%</strong>
+      </div>
+      <div class="editorial-home__metric">
+        <span class="editorial-home__metric-label">Commercial<br>retention lift</span>
+        <strong>40%</strong>
+      </div>
+    </aside>
   </div>
 
-  <aside class="v2-contact">
-    <img
-      class="v2-contact__photo"
-      src="{{ site.author.avatar | prepend: '/images/' | relative_url }}"
-      alt="{{ site.author.name }}"
-    >
-    <strong class="v2-contact__name">{{ site.author.name }}</strong>
-    <p class="v2-contact__summary">Business-minded analytics builder with experience in adtech, insurance, experimentation, and executive reporting.</p>
-    <ul class="v2-contact__list">
-      <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ site.author.location }}</span></li>
-      <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i><span>{{ site.author.employer }}</span></li>
-      <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>{{ site.author.email }}</span></a></li>
-      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>linkedin.com/in/{{ site.author.linkedin }}/</span></a></li>
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>github.com/{{ site.author.github }}</span></a></li>
-    </ul>
-  </aside>
+  <footer class="editorial-home__footer">
+    <div class="editorial-home__stack" aria-label="Core technology stack">
+      <span class="editorial-home__stack-label">Core stack</span>
+      <ul class="editorial-home__stack-items">
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" decoding="async">
+          <span>SQL</span>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" decoding="async">
+          <span>Python</span>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/powerbi.svg" alt="" decoding="async">
+          <span>Power BI</span>
+        </li>
+        <li>
+          <img class="editorial-home__stack-icon--tint" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dbt.svg" alt="" decoding="async">
+          <span>dbt</span>
+        </li>
+        <li>
+          <img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" decoding="async">
+          <span>Snowflake</span>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg" alt="" decoding="async">
+          <span>AWS</span>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/databricks.svg" alt="" decoding="async">
+          <span>Databricks</span>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="" decoding="async">
+          <span>Airflow</span>
+        </li>
+        <li>
+          <img class="editorial-home__stack-icon--tint" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tableau.svg" alt="" decoding="async">
+          <span>Tableau</span>
+        </li>
+      </ul>
+    </div>
+    <nav class="editorial-home__socials" aria-label="Social links">
+      <a href="mailto:{{ site.author.email }}" aria-label="Email Kevin Bai">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="Kevin Bai on LinkedIn">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="Kevin Bai on GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+    </nav>
+  </footer>
 </section>
-
-<hr class="v3-rule">
-
-<section class="v3-impact" aria-label="Career impact highlights">
-  <div class="v3-impact__stat">
-    <span class="v3-impact__num">150%</span>
-    <span class="v3-impact__desc">YoY CTV revenue growth</span>
-  </div>
-  <div class="v3-impact__stat">
-    <span class="v3-impact__num">70%</span>
-    <span class="v3-impact__desc">Faster fraud investigations</span>
-  </div>
-  <div class="v3-impact__stat">
-    <span class="v3-impact__num">25%</span>
-    <span class="v3-impact__desc">Revenue-to-impression lift</span>
-  </div>
-  <div class="v3-impact__stat">
-    <span class="v3-impact__num">40%</span>
-    <span class="v3-impact__desc">Commercial retention lift</span>
-  </div>
-</section>
-
-<hr class="v3-rule">
-
-<section class="v3-stack" aria-label="Core technical stack">
-  <p class="v3-stack__label">Core stack</p>
-  <ul class="v3-stack__items">
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" decoding="async">
-      <span>SQL</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy" decoding="async">
-      <span>Python</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/powerbi.svg" alt="" loading="lazy" decoding="async">
-      <span>Power BI</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon v3-stack__icon--tint" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/dbt.svg" alt="" loading="lazy" decoding="async">
-      <span>dbt</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" loading="lazy" decoding="async">
-      <span>Snowflake</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg" alt="" loading="lazy" decoding="async">
-      <span>AWS</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/databricks.svg" alt="" loading="lazy" decoding="async">
-      <span>Databricks</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="" loading="lazy" decoding="async">
-      <span>Airflow</span>
-    </li>
-    <li>
-      <img class="v3-stack__icon v3-stack__icon--tint" src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tableau.svg" alt="" loading="lazy" decoding="async">
-      <span>Tableau</span>
-    </li>
-  </ul>
-</section>
-

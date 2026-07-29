@@ -10,6 +10,25 @@ page_class: "archive--projects-cards"
   <div class="v2-project">
     <span class="v2-project__num">01</span>
     <div class="v2-project__body">
+      <p class="v2-project__type">Mobile product build</p>
+      <h2 class="v2-project__title">Stokd: Recipe Saver, Pantry, and Meal Ideas</h2>
+      <p class="v2-project__desc">Built a cross-platform cooking app that turns recipes saved from websites and social platforms into an organized workflow for pantry tracking, meal discovery, grocery planning, and guided cooking.</p>
+      <ul class="v2-project__list">
+        <li>Built recipe imports for websites, Instagram, YouTube, Pinterest, Facebook, and RedNote using Supabase Edge Functions and AI-assisted extraction.</li>
+        <li>Combined barcode, receipt, and photo scanning with ingredient normalization to match recipes against pantry inventory and identify what is ready to cook.</li>
+        <li>Engineered a Supabase/PostgreSQL data platform across 62 versioned SQL migrations and 15 Deno Edge Functions, with ETL pipelines for CSV and sitemap ingestion, deduplication, normalization, and keyset-paginated catalog delivery.</li>
+        <li>Delivered guided cook mode with timers and voice assistance, shopping lists, on-device recipe translation, authentication, subscriptions, and iOS and Android release workflows.</li>
+      </ul>
+      <div class="v2-project__footer">
+        <span class="v2-project__stack">Expo &middot; React Native &middot; TypeScript &middot; Supabase &middot; PostgreSQL &middot; Edge Functions &middot; RevenueCat</span>
+        <a href="https://github.com/kbai612/recipe_app_name_tbd" class="v2-project__link" target="_blank" rel="noopener">Open GitHub repo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="v2-project">
+    <span class="v2-project__num">02</span>
+    <div class="v2-project__body">
       <p class="v2-project__type">Retention analytics</p>
       <h2 class="v2-project__title">Retail Customer Churn Prediction and Retention Analytics</h2>
       <p class="v2-project__desc">Built an end-to-end churn system that connects feature engineering, warehouse modeling, explainable machine learning, and a Streamlit dashboard designed for retention action.</p>
@@ -26,7 +45,7 @@ page_class: "archive--projects-cards"
   </div>
 
   <div class="v2-project">
-    <span class="v2-project__num">02</span>
+    <span class="v2-project__num">03</span>
     <div class="v2-project__body">
       <p class="v2-project__type">Data product build</p>
       <h2 class="v2-project__title">BaiBeta Climbing Shoe Price Tracker</h2>
@@ -44,7 +63,7 @@ page_class: "archive--projects-cards"
   </div>
 
   <div class="v2-project">
-    <span class="v2-project__num">03</span>
+    <span class="v2-project__num">04</span>
     <div class="v2-project__body">
       <p class="v2-project__type">Reinforcement learning</p>
       <h2 class="v2-project__title">Deep Q-Learning Snake AI</h2>
@@ -62,7 +81,7 @@ page_class: "archive--projects-cards"
   </div>
 
   <div class="v2-project">
-    <span class="v2-project__num">04</span>
+    <span class="v2-project__num">05</span>
     <div class="v2-project__body">
       <p class="v2-project__type">Applied AI build</p>
       <h2 class="v2-project__title">Cerebro-AI</h2>
