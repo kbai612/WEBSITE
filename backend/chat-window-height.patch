@@ -1,0 +1,13 @@
+diff --git a/_sass/layout/_profile-chat.scss b/_sass/layout/_profile-chat.scss
+--- a/_sass/layout/_profile-chat.scss
++++ b/_sass/layout/_profile-chat.scss
+@@ -113,3 +113,3 @@
+   max-width: none;
+-  height: min(520px, calc(100dvh - 2rem));
++  height: min(640px, calc(100dvh - 2rem));
+   max-height: calc(100dvh - 2rem);
+@@ -279,3 +279,3 @@
+     width: min(360px, calc(100vw - 1rem));
+-    height: min(500px, calc(100dvh - 1rem));
++    height: min(600px, calc(100dvh - 1rem));
+     max-height: calc(100dvh - 1rem);
