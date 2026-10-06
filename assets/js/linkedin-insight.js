@@ -68,7 +68,7 @@
 
   if (navigator.globalPrivacyControl === true) {
     accept.disabled = true;
-    notice.querySelector('p').textContent = 'Your browser’s privacy preference disables LinkedIn tracking on this site.';
+    notice.querySelector('p').textContent = 'Your browser’s privacy preference disables optional tracking cookies on this site.';
   } else {
     var choice = readChoice();
     if (choice === 'accepted') loadTag();

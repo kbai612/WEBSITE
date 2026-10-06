@@ -1,8 +1,8 @@
 {% assign linkedin_partner_id = site.data.linkedin.partner_id | default: '' | strip %}
 {% if linkedin_partner_id != '' and page.analytics != false and jekyll.environment != 'development' %}
 <section class="tracking-consent" data-linkedin-consent data-partner-id="{{ linkedin_partner_id | escape }}" data-site-origin="{{ site.url | escape }}" aria-labelledby="tracking-consent-title" hidden>
-  <h2 id="tracking-consent-title">Allow LinkedIn analytics?</h2>
-  <p>With your permission, LinkedIn uses cookies and visit data to help me understand my professional audience. You can change your choice in the footer.</p>
+  <h2 id="tracking-consent-title">Cookie preferences</h2>
+  <p>With your permission, this site uses optional cookies to understand its audience and support advertising measurement. You can change your choice in the footer.</p>
   <a href="{{ '/privacy/' | relative_url }}">Privacy details</a>
   <div class="tracking-consent__actions">
     <button type="button" data-tracking-reject>Decline</button>
