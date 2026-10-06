@@ -1,0 +1,3 @@
+# Copy the numeric partner ID from LinkedIn Campaign Manager's Insight Tag.
+# This is a public identifier, not an API key. Blank keeps tracking disabled.
+partner_id: "10165620"

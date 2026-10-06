@@ -3,15 +3,19 @@
 The shared chat popup uses the existing Jekyll site, a separate Cloudflare Worker,
 OpenAI, and a private Cloudflare D1 database. Visitors can ask follow-up questions.
 Answers use the website’s public content and the optional profile fields.
+The assistant does not generate citations or display a source list below answers.
 
 The homepage’s “Get to know Kevin” call to action opens the popup. Other pages
 have a chat icon in the bottom-left corner. The shared markup
 lives in `_includes/profile-chat.html`. Closing the popup preserves the current
-conversation during the page visit; the header’s “New chat” icon resets it. Escape
+conversation; the header’s “New chat” icon resets it. Escape
 while focused in chat or the close button dismisses it and returns focus to its opener.
 The compact panel stays at the bottom left without a backdrop, blur, or scroll lock,
 so visitors can interact with the page while chatting. The popup animates on opening
 and closing. Visitors with reduced motion enabled get immediate transitions.
+The conversation, draft, and open/closed state persist across page navigation and
+reloads in the same browser tab using session storage. A question still awaiting
+an answer resumes with the same request ID after navigation.
 
 ## Update the information
 
@@ -92,9 +96,32 @@ FROM conversations ORDER BY updated_at DESC LIMIT 50;
 Inspect a selected conversation (replace the example ID):
 
 ```sql
-SELECT role, content, sources_json, model,
+SELECT role, content, original_content, safety_flagged, sources_json, model,
        datetime(created_at / 1000, 'unixepoch') AS sent_at
 FROM messages WHERE conversation_id = 'CONVERSATION_ID' ORDER BY id;
+```
+
+Review original visitor messages replaced by a safety placeholder:
+
+```sql
+SELECT conversation_id, original_content,
+       datetime(created_at / 1000, 'unixepoch') AS sent_at
+FROM messages WHERE original_content IS NOT NULL ORDER BY id DESC LIMIT 50;
+```
+
+This includes messages redirected by input checks and messages whose safety
+checks were unavailable. The original text is private review data; it is never
+included in model conversation history or returned in chat responses.
+
+`safety_flagged` is `1` on a user message when its input was blocked, or on an
+assistant message when its proposed answer was blocked and replaced with a safe
+redirect. It is `0` otherwise for completed safety checks. `NULL` indicates
+unavailable checks or records saved before this field was added. To review flags:
+
+```sql
+SELECT conversation_id, role, content, original_content,
+       datetime(created_at / 1000, 'unixepoch') AS sent_at
+FROM messages WHERE safety_flagged = 1 ORDER BY id DESC LIMIT 50;
 ```
 
 Delete a conversation manually with `DELETE FROM conversations WHERE id =
@@ -105,7 +132,10 @@ for the same `conversation_id` when deleting a transcript manually.
 The “AI chat · Privacy” disclosure is available below the message field. Conversations are
 removed 90 days after their last activity by the Worker’s daily scheduled task.
 Starting a new chat resets the browser view; it does not delete stored records.
-History exists only in browser memory during that page visit.
+The browser stores the conversation ID, displayed messages, draft, and pending
+request in tab-scoped session storage. Closing the tab ends this browser session;
+“New chat” resets it immediately. If browser storage is unavailable, the chat
+continues to work for the current page visit.
 
 Requests to OpenAI use `store: false`. This disables stored Responses API state,
 but does not disable OpenAI’s applicable abuse-monitoring retention. See
@@ -132,8 +162,10 @@ classifier uses the configured chat model unless `SAFETY_MODEL` is supplied.
 Blocked content receives a fixed friendly invitation to ask about Kevin instead.
 If a check is unavailable, times out, or returns an invalid result, the backend
 returns a fixed safe message. An unchecked draft is never displayed, stored as
-an answer, or written to logs. Declined input is stored as a neutral placeholder,
-and blocked answers have no source links. Old cached answers and conversation
+an answer, or written to logs. Declined or unchecked input is stored as a neutral
+placeholder in `content`, with the original visitor text in `original_content`
+for private review. It follows the same retention and deletion rules as the
+conversation. Blocked answers have no source links. Old cached answers and conversation
 history from before this policy version cannot bypass the new checks.
 
 Apply the new D1 migration before deploying the updated Worker:
@@ -161,8 +193,8 @@ Retries reuse a request ID so a lost response does not cause duplicate charges.
 
 Check `npm test`, `npm run dry-run`, and a Jekyll build before release.
 After configuring credentials, verify a real question about Kevin’s experience,
-a follow-up, source links, an unknown availability question, and a role-fit
-question. Check Cloudflare’s operational logs for errors and the private database
+a follow-up, an answer without a source list, an unknown availability question,
+and a role-fit question. Check Cloudflare’s operational logs for errors and the private database
 for the saved conversation. Logs should contain status information, not message
 contents or API keys.
 

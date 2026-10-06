@@ -5,7 +5,6 @@
   if (!root) return;
 
   var endpoint = (root.dataset.endpoint || '').trim();
-  var sourceOrigin = (root.dataset.sourceOrigin || window.location.origin).replace(/\/$/, '');
   var form = root.querySelector('[data-chat-form]');
   var input = root.querySelector('[data-chat-input]');
   var sendButton = root.querySelector('[data-chat-send]');
@@ -33,6 +32,7 @@
       openButtons.forEach(function (trigger) { trigger.setAttribute('aria-expanded', 'true'); });
       (input.disabled ? closeChat : input).focus({ preventScroll: true });
       scrollMessages();
+      saveSession();
     });
   });
 
@@ -44,6 +44,8 @@
 
   function requestClose() {
     if (!root.open || closing) return;
+    closing = true;
+    saveSession();
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       finishClose();
       return;
@@ -69,6 +71,7 @@
     root.classList.remove('profile-chat--closing');
     openButtons.forEach(function (button) { button.setAttribute('aria-expanded', 'false'); });
     if (opener) opener.focus({ preventScroll: true });
+    saveSession();
   });
 
   root.addEventListener('keydown', function (event) {
@@ -81,6 +84,66 @@
   var retryRequest = null;
   var activeController = null;
   var stateToken = 0;
+  var transcript = [];
+  var sessionKey = 'kevin-profile-chat-v1';
+  var sessionUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+  function saveSession() {
+    try {
+      window.sessionStorage.setItem(sessionKey, JSON.stringify({
+        endpoint: endpoint,
+        conversationId: conversationId,
+        messages: transcript,
+        pendingRequest: retryRequest,
+        open: root.open && !closing,
+        draft: input.value
+      }));
+    } catch (_) {
+      // Chat remains usable when browser storage is unavailable or full.
+    }
+  }
+
+  function restoreSession() {
+    try {
+      var saved = JSON.parse(window.sessionStorage.getItem(sessionKey));
+      if (!saved || saved.endpoint !== endpoint || !Array.isArray(saved.messages) || saved.messages.length > 100) return;
+      if (saved.conversationId !== null && !sessionUuid.test(saved.conversationId)) return;
+      if (!saved.messages.every(function (entry) {
+        return entry && (entry.kind === 'user' || entry.kind === 'assistant') &&
+          typeof entry.text === 'string' && entry.text.length <= 7000;
+      })) return;
+      var pending = saved.pendingRequest;
+      if (pending && (!pending.body || !sessionUuid.test(pending.body.requestId) ||
+          typeof pending.body.message !== 'string' || !pending.body.message.trim() || pending.body.message.length > 2000 ||
+          (pending.body.conversationId !== undefined && pending.body.conversationId !== saved.conversationId))) return;
+      conversationId = saved.conversationId;
+      retryRequest = pending ? { body: {
+        message: pending.body.message,
+        requestId: pending.body.requestId,
+        ...(pending.body.conversationId ? { conversationId: pending.body.conversationId } : {})
+      } } : null;
+      transcript = [];
+      if (saved.messages.length) {
+        messages.innerHTML = '';
+        saved.messages.forEach(function (entry) {
+          addMessage(entry.kind === 'user' ? 'You' : 'Kevin’s AI assistant', entry.text, entry.kind);
+        });
+        starters.hidden = saved.messages.some(function (entry) { return entry.kind === 'user'; });
+      }
+      if (typeof saved.draft === 'string') input.value = saved.draft.slice(0, 2000);
+      if (saved.open === true) {
+        if (!root.open) root.show();
+        openButtons.forEach(function (button) { button.setAttribute('aria-expanded', 'true'); });
+        scrollMessages();
+      } else if (root.open) {
+        root.close();
+      }
+      saveSession();
+      if (retryRequest && endpoint) sendRequest(retryRequest);
+    } catch (_) {
+      // Ignore invalid saved data and keep the fresh chat available.
+    }
+  }
 
   function uuid() {
     if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
@@ -105,41 +168,12 @@
     article.appendChild(label);
     article.appendChild(paragraph);
     messages.appendChild(article);
+    if (kind === 'user' || kind === 'assistant') {
+      transcript.push({ kind: kind, text: text });
+      transcript = transcript.slice(-100);
+    }
     scrollMessages();
     return article;
-  }
-
-  function addAnswer(answer, sources) {
-    var article = addMessage('Kevin’s AI assistant', answer, 'assistant');
-    var validSources = Array.isArray(sources) ? sources.filter(function (source) {
-      if (!source || typeof source.title !== 'string' || typeof source.url !== 'string') return false;
-      try {
-        var site = new URL(sourceOrigin);
-        var url = new URL(source.url, site.origin + '/');
-        return url.protocol === 'https:' && url.origin === site.origin && !url.username && !url.password;
-      } catch (_) {
-        return false;
-      }
-    }).slice(0, 5) : [];
-
-    if (validSources.length) {
-      var list = document.createElement('ul');
-      list.className = 'profile-chat__sources';
-      var heading = document.createElement('p');
-      heading.className = 'profile-chat__sources-label';
-      heading.textContent = 'Read more';
-      article.appendChild(heading);
-      validSources.forEach(function (source) {
-        var item = document.createElement('li');
-        var link = document.createElement('a');
-        link.href = new URL(source.url, sourceOrigin + '/').href;
-        link.textContent = source.title.slice(0, 100);
-        item.appendChild(link);
-        list.appendChild(item);
-      });
-      article.appendChild(list);
-      scrollMessages();
-    }
   }
 
   function setBusy(busy) {
@@ -193,6 +227,7 @@
     if (!request) return;
 
     retryRequest = request;
+    saveSession();
     setBusy(true);
     starters.hidden = true;
     var deadline = Date.now() + 35000;
@@ -229,14 +264,15 @@
           throw error;
         }
         if (!data || typeof data.answer !== 'string' || !data.answer.trim()) throw new Error('The chat service returned an invalid answer.');
-        if (typeof data.conversationId === 'string' && data.conversationId.length <= 256) conversationId = data.conversationId;
         if (token !== stateToken) return;
-        addAnswer(data.answer.slice(0, 7000), data.sources);
+        if (typeof data.conversationId === 'string' && sessionUuid.test(data.conversationId)) conversationId = data.conversationId;
+        addMessage('Kevin’s AI assistant', data.answer.slice(0, 7000), 'assistant');
         retryRequest = null;
         contact.hidden = true;
         status.textContent = '';
         form.reset();
         input.style.height = '';
+        saveSession();
         return;
       }
       throw new Error('The answer is taking longer than expected.');
@@ -245,6 +281,7 @@
       status.textContent = '';
       revealContact();
       var terminal = error.status >= 400;
+      if (terminal) retryRequest = null;
       var quotaOrRateLimit = /quota|daily.limit|rate.limit|too.many.requests/i.test((error.code || '') + ' ' + error.message);
       retryControl(request, {
         title: terminal ? 'The assistant couldn’t answer' : 'Could not get an answer',
@@ -252,6 +289,7 @@
         retry: !quotaOrRateLimit,
         newRequestId: terminal
       });
+      saveSession();
     } finally {
       if (token === stateToken) {
         activeController = null;
@@ -281,6 +319,7 @@
   input.addEventListener('input', function () {
     input.style.height = 'auto';
     input.style.height = Math.min(input.scrollHeight, 96) + 'px';
+    saveSession();
   });
 
   input.addEventListener('keydown', function (event) {
@@ -300,6 +339,7 @@
     if (activeController) activeController.abort();
     activeController = null;
     messages.innerHTML = '';
+    transcript = [];
     addMessage('Kevin’s AI assistant', 'Hi! What would you like to know about Kevin?', 'assistant');
     conversationId = null;
     retryRequest = null;
@@ -309,6 +349,7 @@
     form.reset();
     input.style.height = '';
     setBusy(false);
+    saveSession();
     (input.disabled ? closeChat : input).focus({ preventScroll: true });
   });
 
@@ -318,4 +359,18 @@
     starters.hidden = true;
     setBusy(false);
   }
+  restoreSession();
+  window.addEventListener('pagehide', function () {
+    saveSession();
+    stateToken += 1;
+    if (activeController) activeController.abort();
+    activeController = null;
+  });
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      setBusy(false);
+      status.textContent = '';
+      restoreSession();
+    }
+  });
 }());
