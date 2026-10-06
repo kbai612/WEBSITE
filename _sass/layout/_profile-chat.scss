@@ -1,4 +1,11 @@
-/* Shared invitation and floating chat, using the site's paper / ink / teal palette. */
+/* Shared invitation and floating chat, using the site's paper / ink / forest green palette. */
+.profile-chat-cta,
+.profile-chat-launcher,
+dialog.profile-chat {
+  --profile-chat-accent: #1f5b3a;
+  --profile-chat-accent-hover: #17472d;
+}
+
 .profile-chat-cta {
   max-width: 30rem;
   margin-top: clamp(1rem, 3vh, 1.75rem);
@@ -6,10 +13,10 @@
   border-top: 1px solid var(--home-rule);
 
   h2 {
-    margin: 0.3rem 0 0.55rem !important;
-    font-family: 'DM Serif Display', Georgia, serif;
-    font-size: clamp(1.65rem, 2.6vw, 2.25rem);
-    font-weight: 400;
+    margin: 0.3rem 0 1rem !important;
+    font-family: Georgia, serif;
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+    font-weight: normal;
     line-height: 1.15;
   }
 
@@ -30,8 +37,8 @@
   gap: 1.5rem;
   min-height: 48px;
   padding: 0.7rem 1rem;
-  border: 1px solid var(--global-base-color);
-  background: var(--global-base-color);
+  border: 1px solid var(--profile-chat-accent);
+  background: var(--profile-chat-accent);
   color: var(--global-bg-color);
   font: inherit;
   font-size: 0.85rem;
@@ -40,6 +47,8 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 
   &:hover {
+    border-color: var(--profile-chat-accent-hover);
+    background: var(--profile-chat-accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
   }
@@ -58,6 +67,9 @@
   border-radius: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
 }
+
+.profile-chat-cta__button span,
+.profile-chat-cta__button i { color: #fff; }
 
 .profile-chat-cta__caption {
   display: block;
@@ -128,7 +140,7 @@ dialog.profile-chat {
     gap: 8px;
     padding: 12px;
     border: 0;
-    background: #0d7377;
+    background: var(--profile-chat-accent);
     color: #fff;
   }
 
@@ -152,7 +164,7 @@ dialog.profile-chat {
     line-height: 1.4;
   }
 
-  .profile-chat__availability { display: block; color: #d7eeed; font-size: 11px; line-height: 1.5; }
+  .profile-chat__availability { display: block; color: #dcebe1; font-size: 11px; line-height: 1.5; }
 
   .profile-chat__new,
   .profile-chat__close {
@@ -201,7 +213,7 @@ dialog.profile-chat {
   .profile-chat__message--user {
     align-self: flex-end;
     border-radius: 12px 12px 3px 12px;
-    background: #0d7377;
+    background: var(--profile-chat-accent);
     text-align: left;
     p { color: #fff; }
   }
@@ -222,7 +234,7 @@ dialog.profile-chat {
     margin: 0 12px;
     padding: 5px;
     border-radius: 24px;
-    &:focus-within { border-color: var(--global-base-color); }
+    &:focus-within { border-color: var(--profile-chat-accent); }
     textarea {
       min-height: 36px;
       padding: 7px 9px;
@@ -235,9 +247,10 @@ dialog.profile-chat {
       width: 36px;
       height: 36px;
       border: 0;
-      background: #0d7377;
+      background: var(--profile-chat-accent);
       color: #fff;
       font-size: 14px;
+      &:hover:not(:disabled) { background: var(--profile-chat-accent-hover); }
       &:disabled { cursor: default; }
     }
   }
@@ -255,7 +268,7 @@ dialog.profile-chat {
     color: var(--global-text-color-light);
     font-size: 11px;
     summary { width: fit-content; cursor: pointer; }
-    summary:focus-visible { outline: 2px solid var(--global-base-color); outline-offset: 3px; }
+    summary:focus-visible { outline: 2px solid var(--profile-chat-accent); outline-offset: 3px; }
     .profile-chat__note { margin-top: 6px !important; font-size: 11px !important; }
   }
 }

@@ -1,5 +1,5 @@
 # Public URL of the deployed Cloudflare Worker, including /chat.
 # Leave blank until the backend is configured. No API keys belong here.
-endpoint: ""
+endpoint: "https://kevin-bai-chat.kevinbaiyyz.workers.dev/chat"
 # Canonical public site origin for verified source links, including local previews.
 source_origin: "https://kevin-bai.com"

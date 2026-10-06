@@ -19,14 +19,11 @@ show_page_meta: false
       </h1>
 
       <section class="profile-chat-cta" aria-labelledby="profile-chat-cta-title">
-        <span class="profile-chat__eyebrow">Beyond the résumé</span>
-        <h2 id="profile-chat-cta-title">Get to know Kevin.</h2>
-        <p>Explore his experience, the projects he’s built, and what he could bring to your team.</p>
+        <h2 id="profile-chat-cta-title">Curious about my work?</h2>
         <button class="profile-chat-cta__button" type="button" data-chat-open aria-haspopup="dialog" aria-controls="profile-chat-dialog" hidden>
           <i class="fas fa-comment-dots" aria-hidden="true"></i>
           <span>Ask about Kevin</span>
         </button>
-        <span class="profile-chat-cta__caption">A conversation with Kevin’s AI assistant</span>
         <noscript><p><a href="mailto:{{ site.author.email }}">Contact Kevin by email</a>. Chat needs JavaScript.</p></noscript>
       </section>
     </div>
