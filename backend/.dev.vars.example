@@ -1,0 +1,2 @@
+OPENAI_API_KEY=replace-with-your-key
+ALLOWED_ORIGINS=http://localhost:4000,http://127.0.0.1:4000

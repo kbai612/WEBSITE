@@ -1,0 +1,38 @@
+{% unless page.page_class contains 'page--home' %}
+<button class="profile-chat-launcher" type="button" data-chat-open aria-label="Ask about Kevin" aria-haspopup="dialog" aria-controls="profile-chat-dialog" aria-expanded="false" hidden>
+  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+</button>
+{% endunless %}
+<dialog id="profile-chat-dialog" class="profile-chat" data-profile-chat data-endpoint="{{ site.data.chat.endpoint | escape }}" data-source-origin="{{ site.data.chat.source_origin | default: site.url | escape }}" data-contact="{{ site.author.email | escape }}" aria-labelledby="profile-chat-title">
+        <div class="profile-chat__heading">
+          <span class="profile-chat__avatar" aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+          <div class="profile-chat__title-group">
+            <h2 id="profile-chat-title">Ask about Kevin</h2>
+            <span class="profile-chat__availability" data-chat-availability>AI assistant</span>
+          </div>
+          <button class="profile-chat__new" type="button" data-chat-new aria-label="Start a new chat" title="New chat"><i class="fas fa-redo" aria-hidden="true"></i></button>
+          <button class="profile-chat__close" type="button" data-chat-close aria-label="Close chat">&times;</button>
+        </div>
+        <div class="profile-chat__messages" data-chat-messages role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation with Kevin’s AI assistant">
+          <article class="profile-chat__message profile-chat__message--assistant">
+            <span class="profile-chat__speaker visually-hidden">Kevin’s AI assistant</span>
+            <p>Hi! What would you like to know about Kevin?</p>
+          </article>
+        </div>
+        <div class="profile-chat__starters" data-chat-starters aria-label="Try asking">
+          <button type="button" data-chat-starter="What’s Kevin’s experience?">Experience</button>
+          <button type="button" data-chat-starter="Tell me about Kevin’s projects">Projects</button>
+          <button type="button" data-chat-starter="Would Kevin fit this role?">Role fit</button>
+        </div>
+        <form class="profile-chat__form" data-chat-form>
+          <label class="visually-hidden" for="profile-chat-input">Ask a question about Kevin</label>
+          <textarea id="profile-chat-input" name="message" rows="1" maxlength="2000" placeholder="Ask a question…" required data-chat-input></textarea>
+          <button type="submit" data-chat-send aria-label="Send question"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+        </form>
+        <p class="profile-chat__status" data-chat-status role="status" aria-live="polite"></p>
+        <p class="profile-chat__contact" data-chat-contact hidden><a href="mailto:{{ site.author.email }}">Email Kevin instead &nearr;</a></p>
+        <details class="profile-chat__privacy">
+          <summary>AI chat · Privacy</summary>
+          <p id="profile-chat-disclosure" class="profile-chat__note">AI processes messages. Kevin can review chats for 90 days. Don’t share sensitive information.</p>
+        </details>
+      </dialog>

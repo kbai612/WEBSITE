@@ -9,6 +9,25 @@ page_class: "archive--projects-cards"
 <section class="v2-exp-section">
   <div class="v2-exp-item">
     <div class="v2-exp-meta">
+      <span class="v2-exp-company">Propel Holdings</span>
+      <span class="v2-exp-dates">Aug 2026 &ndash; Present</span>
+    </div>
+    <div class="v2-exp-content">
+      <h2 class="v2-exp-title">Analytics Engineer</h2>
+      <p class="v2-exp-summary">Build reliable data models and self-service analytics while strengthening the team's development practices and modernizing its data warehouse.</p>
+      <ul>
+        <li>Built and enhanced Sigma dashboards used by 80+ stakeholders to track core KPIs and identify business trends, reducing reliance on recurring ad hoc reporting.</li>
+        <li>Developed and maintained dbt data models for 6+ business teams, delivering reliable, analytics-ready data for reporting and operational decisions.</li>
+        <li>Contributed to the migration from a legacy data warehouse to Snowflake, modernizing the data platform supporting business analytics.</li>
+        <li>Revamped CI/CD and deployment workflows with automated testing, validation, and development controls to reduce production issues and improve release reliability.</li>
+        <li>Established standards for dbt modeling, testing, documentation, naming conventions, and Git workflows, improving maintainability and accelerating team onboarding and development.</li>
+      </ul>
+      <p class="v2-exp-stack">Snowflake &nbsp;&middot;&nbsp; dbt &nbsp;&middot;&nbsp; Sigma &nbsp;&middot;&nbsp; SQL &nbsp;&middot;&nbsp; Git &nbsp;&middot;&nbsp; CI/CD &nbsp;&middot;&nbsp; Data Governance</p>
+    </div>
+  </div>
+
+  <div class="v2-exp-item">
+    <div class="v2-exp-meta">
       <span class="v2-exp-company">StackAdapt</span>
       <span class="v2-exp-dates">Aug 2023 &ndash; Mar 2026</span>
     </div>

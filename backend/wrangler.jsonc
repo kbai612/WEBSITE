@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kevin-bai-chat",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://kevin-bai.com",
+    "OPENAI_MODEL": "gpt-4.1-mini"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kevin-bai-chat",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "BURST_LIMITER",
+      "namespace_id": "612701",
+      "simple": { "limit": 12, "period": 60 }
+    }
+  ],
+  "triggers": { "crons": ["17 3 * * *"] }
+}

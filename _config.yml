@@ -78,6 +78,12 @@ include:
   - _pages
   - files
 exclude:
+  - backend
+  - docs
+  - output
+  - .dev.vars
+  - .env
+  - .env.*
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

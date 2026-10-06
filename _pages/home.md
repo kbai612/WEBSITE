@@ -18,19 +18,17 @@ show_page_meta: false
         <em>Professional.</em>
       </h1>
 
-      <ul class="editorial-home__disciplines" aria-label="Areas of expertise">
-        <li>Analytics</li>
-        <li>Data Engineering</li>
-        <li>Machine Learning</li>
-      </ul>
-
-      <p class="editorial-home__summary">I turn product and customer data into measurable revenue, retention, and fraud-prevention wins.</p>
-
-      <a class="editorial-home__project-link" href="{{ '/projects/' | relative_url }}" aria-label="View Stokd, a recipe saver and pantry app">
-        <span class="editorial-home__project-meta">Featured project / Stokd</span>
-        <strong>iOS app for recipe importing, pantry tracking and guided cooking</strong>
-        <span class="editorial-home__project-arrow" aria-hidden="true">&nearr;</span>
-      </a>
+      <section class="profile-chat-cta" aria-labelledby="profile-chat-cta-title">
+        <span class="profile-chat__eyebrow">Beyond the résumé</span>
+        <h2 id="profile-chat-cta-title">Get to know Kevin.</h2>
+        <p>Explore his experience, the projects he’s built, and what he could bring to your team.</p>
+        <button class="profile-chat-cta__button" type="button" data-chat-open aria-haspopup="dialog" aria-controls="profile-chat-dialog" hidden>
+          <i class="fas fa-comment-dots" aria-hidden="true"></i>
+          <span>Ask about Kevin</span>
+        </button>
+        <span class="profile-chat-cta__caption">A conversation with Kevin’s AI assistant</span>
+        <noscript><p><a href="mailto:{{ site.author.email }}">Contact Kevin by email</a>. Chat needs JavaScript.</p></noscript>
+      </section>
     </div>
 
     <figure class="editorial-home__portrait">

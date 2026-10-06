@@ -1,0 +1,2 @@
+ALTER TABLE requests ADD COLUMN safety_version TEXT NOT NULL DEFAULT '';
+ALTER TABLE messages ADD COLUMN safety_version TEXT NOT NULL DEFAULT '';

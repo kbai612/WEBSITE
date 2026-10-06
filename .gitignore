@@ -28,3 +28,14 @@ Gemfile.lock
 Gemfile
 .bundle/
 vendor/
+
+# Chat backend secrets and generated development artifacts
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env.*
+!.env.example
+.wrangler/
+backend/src/knowledge.json
+output/
+.playwright-cli/

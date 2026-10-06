@@ -1,0 +1,19 @@
+{
+  "name": "kevin-bai-chat-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "knowledge": "node scripts/build-knowledge.mjs",
+    "predev": "npm run knowledge",
+    "dev": "wrangler dev",
+    "predeploy": "npm run knowledge",
+    "deploy": "wrangler deploy",
+    "dry-run": "npm run knowledge && wrangler deploy --dry-run",
+    "pretest": "npm run knowledge",
+    "db:local": "wrangler d1 migrations apply kevin-bai-chat --local",
+    "db:remote": "wrangler d1 migrations apply kevin-bai-chat --remote",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22.13" },
+  "devDependencies": { "wrangler": "4.147.0" }
+}

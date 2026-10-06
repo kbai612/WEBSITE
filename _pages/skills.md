@@ -199,14 +199,62 @@ author_profile: true
 
 <div class="v2-domain-section">
   <h3 class="v2-skill-group__title">Domain Expertise</h3>
-  <ul class="v2-domain-list">
-    <li>Product Analytics</li>
-    <li>Revenue Optimization</li>
-    <li>Fraud Detection</li>
-    <li>Customer Retention</li>
-    <li>KPI Development</li>
-    <li>Data Governance</li>
-    <li>Cross-functional Leadership</li>
-    <li>Stakeholder Communication</li>
+  <ul class="v2-domain-list" role="list">
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12M13 17l2-3 2 1 2-3"/></svg>
+      </span>
+      <h4>Product Analytics</h4>
+      <p>Connect product performance and experiments to better business decisions.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M4 20h16M6 16v-4M12 16V9M18 16V5M4 9l6-5 4 2 6-4M16 2h4v4"/></svg>
+      </span>
+      <h4>Revenue Optimization</h4>
+      <p>Identify growth opportunities and evaluate the drivers of margin efficiency.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="M12 8v5M12 16h.01"/></svg>
+      </span>
+      <h4>Fraud Detection</h4>
+      <p>Surface suspicious patterns and streamline investigation workflows.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><circle cx="12" cy="9" r="3"/><path d="M7 18v-1a5 5 0 0 1 10 0v1M4 8a9 9 0 0 1 15-3M20 16a9 9 0 0 1-15 3M19 2v3h-3M5 22v-3h3"/></svg>
+      </span>
+      <h4>Customer Retention</h4>
+      <p>Use predictive insights to understand churn risk and support retention.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/></svg>
+      </span>
+      <h4>KPI Development</h4>
+      <p>Translate business goals into consistent metrics and actionable dashboards.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3M20 5v5M4 12v7c0 1.7 3.6 3 8 3M4 12c0 1.7 3.6 3 8 3"/><path d="M17 12l4 1.5V17c0 2.5-4 4.5-4 4.5S13 19.5 13 17v-3.5L17 12Z"/></svg>
+      </span>
+      <h4>Data Governance</h4>
+      <p>Build trust in data through shared definitions, documentation, and quality controls.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M12 8v4M5 15v-3h14v3M12 12v4"/></svg>
+      </span>
+      <h4>Cross-functional Leadership</h4>
+      <p>Align technical and business teams to deliver shared data initiatives.</p>
+    </li>
+    <li class="v2-domain-card">
+      <span class="v2-domain-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M14 14H8l-5 4V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v6M8 7h6M8 10h3"/><path d="M16 11h4a2 2 0 0 1 2 2v8l-4-3h-4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h2Z"/></svg>
+      </span>
+      <h4>Stakeholder Communication</h4>
+      <p>Turn complex analysis into clear recommendations and decision-ready reporting.</p>
+    </li>
   </ul>
 </div>
